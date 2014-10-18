@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
     
     if (IOS7_OR_LATER) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -48,7 +48,7 @@
     [self.view addSubview:_contentView];
     
     self.navigationItem.backBarButtonItem =
-    [[UIBarButtonItem alloc] initWithTitle:@"返回"
+    [[UIBarButtonItem alloc] initWithTitle:@""
                                      style:UIBarButtonItemStylePlain
                                     target:self
                                     action:nil];
@@ -64,7 +64,7 @@
     }
     if (self.navigationController && !self.navigationController.navigationBarHidden) {
         contentHeight -= kNavigationBarHeight;
-     
+        
         return CGRECT_HAVE_NAV(0, 0, kScreenWidth, contentHeight);
     }
     return CGRECT_NO_NAV(0, 0, kScreenWidth, contentHeight);

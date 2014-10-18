@@ -38,11 +38,13 @@
 -(void)viewWillAppear:(BOOL)animated {
     
     _locService.delegate = self;
+    _geocodesearch.delegate = self;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     
     _locService.delegate = nil;
+    _geocodesearch.delegate = nil;
 }
 /**
  *在地图View将要启动定位时，会调用此函数
@@ -86,18 +88,19 @@
         NSString* titleStr;
         NSString* showmeg;
         titleStr = @"反向地理编码";
-        showmeg = [NSString stringWithFormat:@"%@",result.address];
+        showmeg = [NSString stringWithFormat:@"%@-%@-%@-%@%@",result.addressDetail.province,result.addressDetail.city,result.addressDetail.district,result.addressDetail.streetName,result.addressDetail.streetNumber];
         
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:titleStr message:showmeg delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定",nil];
-        [myAlertView show];
+        _addFromLabel.text = showmeg;
+
     }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     _locService = [[BMKLocationService alloc]init];
-    
+    _geocodesearch = [[BMKGeoCodeSearch alloc]init];
     [_locService startUserLocationService];
+
     // Do any additional setup after loading the view.
     _addBtnArray = [[NSMutableArray alloc]initWithCapacity:2];
     _addBtnArrayTwo = [[NSMutableArray alloc]initWithCapacity:2];
@@ -145,7 +148,8 @@
     [_imageViewThree addSubview:_itemNamelTwo2];
     
     
-    _addFromLabel = [[MBLabel alloc]initWithFrame:CGRectMake(70, 5, kScreenWidth-120, 30)];
+    _addFromLabel = [[MBLabel alloc]initWithFrame:CGRectMake(70, 0, kScreenWidth-120, 40)];
+    _addFromLabel.numberOfLines=2;
     _addFromLabel.font = kNormalTextFont;
     [_imageViewThree addSubview:_addFromLabel];
     
@@ -424,7 +428,7 @@
     loginBtn.layer.borderColor=[UIColor grayColor].CGColor;
     [self.contentView addSubview:loginBtn];
     [loginBtn addTarget:self action:@selector(getCodeBtnPressed) forControlEvents:UIControlEventTouchUpInside];
-    
+    [self.contentView contentSizeToFit];
 }
 //发布
 -(void)getCodeBtnPressed{

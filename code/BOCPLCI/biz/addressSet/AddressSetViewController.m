@@ -12,9 +12,10 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "MBTextField.h"
 #import "BMapKit.h"
-@interface AddressSetViewController ()<BMKLocationServiceDelegate>
+@interface AddressSetViewController ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 {
     BMKLocationService* _locService;
+    BMKGeoCodeSearch* _geocodesearch;
 
     MBSelectView *_proviceAbout;
     MBSelectView *_shiAbout;
@@ -76,13 +77,15 @@
     return oneArr;
 }
 -(void)viewWillAppear:(BOOL)animated {
-   
+    
     _locService.delegate = self;
+    _geocodesearch.delegate = self;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-   
+    
     _locService.delegate = nil;
+    _geocodesearch.delegate = nil;
 }
 /**
  *在地图View将要启动定位时，会调用此函数
@@ -99,14 +102,45 @@
 - (void)didUpdateUserLocation:(BMKUserLocation *)userLocation
 {
     NSLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+    [_locService stopUserLocationService];
+    
+    
+    
+    CLLocationCoordinate2D pt = (CLLocationCoordinate2D){userLocation.location.coordinate.latitude, userLocation.location.coordinate.longitude};
+    
+    BMKReverseGeoCodeOption *reverseGeocodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];
+    reverseGeocodeSearchOption.reverseGeoPoint = pt;
+    BOOL flag = [_geocodesearch reverseGeoCode:reverseGeocodeSearchOption];
+    if(flag)
+    {
+        NSLog(@"反geo检索发送成功");
+    }
+    else
+    {
+        NSLog(@"反geo检索发送失败");
+    }
+    
+}
+-(void) onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error
+{
+    
+    if (error == 0) {
+        
+        NSString* titleStr;
+        NSString* showmeg;
+        titleStr = @"反向地理编码";
+        showmeg = [NSString stringWithFormat:@"%@-%@-%@-%@%@",result.addressDetail.province,result.addressDetail.city,result.addressDetail.district,result.addressDetail.streetName,result.addressDetail.streetNumber];
+        
+        _searchAddTF.text = showmeg;
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"地址设置";
     _locService = [[BMKLocationService alloc]init];
+    _geocodesearch = [[BMKGeoCodeSearch alloc]init];
 
-    [_locService startUserLocationService];
 
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(selectNameOver)];
@@ -208,7 +242,8 @@
 //定位
 -(void)locationBtnPressed{
 
-    
+    [_locService startUserLocationService];
+
 }
 //区改变
 -(void)quAboutChange:(MBSelectView*)select{
