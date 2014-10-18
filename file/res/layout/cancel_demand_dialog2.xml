@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"  android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="@color/white"
+    >
+<TextView android:text="@string/tv_cancel_tab2" android:layout_width="fill_parent" android:layout_marginTop="10dip"
+		  android:layout_height="wrap_content"  android:layout_marginLeft="15dip"
+		  android:textSize="18sp" android:textColor="@color/tab_select_color"/>
+<EditText android:id="@+id/et_cancel"  android:layout_width="fill_parent" android:layout_height="wrap_content"
+		  android:layout_margin="10dip" android:background="@drawable/bg_list_one_normal" android:minLines="3"
+     android:maxLength="50" android:gravity="left" android:textSize="14sp"/>
+</LinearLayout>

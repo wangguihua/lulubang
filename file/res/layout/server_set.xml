@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/o_grey" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		    
+		     <!--   -->
+     <RelativeLayout android:id="@+id/rl_address_type" android:background="@drawable/xml_bg_list_up" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+       <TextView android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true" android:textColor="@color/black" android:textSize="16.0sp"  android:text="@string/btn_address_type" 
+	    
+  	   />
+       <TextView android:id="@+id/tv_address_type" android:layout_width="wrap_content" android:layout_height="wrap_content"
+	    android:layout_centerVertical="true" android:textColor="@color/grey" android:textSize="14.0sp" android:layout_toLeftOf="@+id/iv_atype_r"
+  	    android:gravity="right" android:text=""
+  	   />
+       <ImageView android:id="@+id/iv_atype_r"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_shop_address" android:background="@drawable/xml_bg_list_middle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+       <TextView android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true" android:textColor="@color/black" android:textSize="16.0sp"  android:text="@string/btn_shop_address" 
+	    android:id="@+id/tv_shop_address_tab"
+  	   />
+       <TextView android:id="@+id/tv_shop_address" android:layout_width="wrap_content" android:layout_height="wrap_content"
+	    android:layout_centerVertical="true" android:textColor="@color/grey" android:textSize="14.0sp" android:layout_toLeftOf="@+id/iv_shop_address_r"
+  	    android:gravity="right" android:layout_toRightOf="@+id/tv_shop_address_tab"
+  	   />
+       <ImageView android:id="@+id/iv_shop_address_r"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    
+    <RelativeLayout android:id="@+id/rl_sale_fangwei" android:background="@drawable/xml_bg_list_middle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+       <TextView android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true" android:textColor="@color/black" android:textSize="16.0sp"  android:text="@string/btn_sale_fangwei" 
+	     android:id="@+id/tv_sale_fangwei_tab"
+  	   />
+       <TextView android:id="@+id/tv_sale_fangwei" android:layout_width="wrap_content" android:layout_height="wrap_content"
+	    android:layout_centerVertical="true" android:textColor="@color/grey" android:textSize="14.0sp" android:layout_toLeftOf="@+id/iv_sale_fangwei_r"
+  	    android:gravity="right" android:layout_toRightOf="@+id/tv_sale_fangwei_tab"
+  	   />
+       <ImageView android:id="@+id/iv_sale_fangwei_r"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_company_web" android:background="@drawable/xml_bg_list_under" android:layout_width="fill_parent" android:layout_height="wrap_content">
+       <TextView android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true" android:textColor="@color/black" android:textSize="16.0sp"  android:text="@string/btn_company_web" 
+	     android:id="@+id/tv_company_web_tab"
+  	   />
+       <TextView android:id="@+id/tv_company_web" android:layout_width="wrap_content" android:layout_height="wrap_content"
+	    android:layout_centerVertical="true" android:textColor="@color/grey" android:textSize="14.0sp" android:layout_toLeftOf="@+id/iv_company_web_r"
+  	    android:gravity="right"  android:layout_toRightOf="@+id/tv_company_web_tab"
+  	   />
+       <ImageView android:id="@+id/iv_company_web_r"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    
+    
+        </LinearLayout>        
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:background="@color/o_grey"  android:orientation="vertical" >
+    <Button android:textColor="#ff313131" android:gravity="left|center" android:id="@+id/btn_share_location" android:background="@drawable/xml_bg_list_up" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="分享位置" android:drawableRight="@drawable/tag_setting_no" 
+         android:textSize="16sp" />
+      <Button android:textColor="#ff313131" android:gravity="left|center" android:id="@+id/btn_message" android:background="@drawable/xml_bg_list_middle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="接受消息" android:drawableRight="@drawable/tag_setting_no" android:textSize="16sp"  />
+        <RelativeLayout android:id="@+id/rl_message_distance" android:background="@drawable/xml_bg_list_middle"  android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="#ff313131" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接受消息范围" android:layout_centerVertical="true" android:textSize="16sp"  />
+            <ImageView android:id="@+id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tag_bottom" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:id="@+id/tv_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:text="默认 500米" android:layout_toLeftOf="@id/icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+       <Button android:textColor="#ff313131" android:gravity="left|center" android:id="@+id/btn_yuyin_alert" android:background="@drawable/xml_bg_list_middle" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:text="语音播报" android:drawableRight="@drawable/tag_setting_no" android:textSize="16sp"  />    
+        <Button android:textColor="#ff313131" android:gravity="left|center" android:id="@+id/btn_voice_alert" android:background="@drawable/xml_bg_list_middle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="声音提醒" android:drawableRight="@drawable/tag_setting_no" android:textSize="16sp"  />
+        <Button android:textColor="#ff313131" android:gravity="left|center" android:id="@+id/btn_wheel_alert" android:background="@drawable/xml_bg_list_under" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="震动提醒" android:drawableRight="@drawable/tag_setting_no" android:textSize="16sp"  />
+        
+        
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_feedback" android:background="@drawable/xml_bg_list_up" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip">
+            <TextView android:textColor="#ff313131" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="建议与反馈" android:drawableLeft="@drawable/feedback_tag" android:drawablePadding="10.0dip" android:layout_weight="1.0" android:textSize="16sp" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tag_right" />
+        </LinearLayout>
+        <!--  <LinearLayout android:orientation="horizontal" android:id="@+id/ll_shared" android:background="@drawable/xml_bg_list_middle" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:textColor="#ff313131" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="分享给朋友" android:drawableLeft="@drawable/share_tag" android:drawablePadding="10.0dip" android:layout_weight="1.0" android:textSize="16sp" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tag_right" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_invite" android:background="@drawable/xml_bg_list_middle" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:textColor="#ff313131" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="邀请好友" android:drawableLeft="@drawable/invite_tag" android:drawablePadding="10.0dip" android:layout_weight="1.0" android:textSize="16sp" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tag_right" />
+        </LinearLayout>-->
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_version" android:background="@drawable/xml_bg_list_under" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:textColor="#ff313131" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="版本检查" android:drawableLeft="@drawable/setting_tag" android:drawablePadding="10.0dip" android:layout_weight="1.0" android:textSize="16sp" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tag_right" />
+        </LinearLayout>
+       <!--   <LinearLayout android:orientation="horizontal" android:id="@+id/ll_about_llt" android:background="@drawable/xml_bg_list_under" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginBottom="10.0dip" >
+            <TextView android:textColor="#ff313131" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="关于路路帮" android:drawableLeft="@drawable/info_tag" android:drawablePadding="10.0dip" android:layout_weight="1.0" android:textSize="16sp" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tag_right" />
+        </LinearLayout>-->
+</LinearLayout>

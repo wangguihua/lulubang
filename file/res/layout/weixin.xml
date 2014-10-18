@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/weixin_header" />
+    <!-- body -->
+	<LinearLayout android:layout_below="@+id/ll_head" android:background="@color/o_grey" 
+	    android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_tab_bar_normal2">
+        <TextView android:id="@+id/tv_chats" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="16.0sp"
+            android:layout_weight="1.0" android:gravity="center" android:text="@string/tv_chat_lt" android:textColor="#000000" />
+        <!-- 
+        <TextView android:id="@+id/tv_cfriends" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="16.0sp"
+            android:layout_weight="1.0" android:gravity="center" android:text="@string/tv_chat_pyq" android:textColor="#000000" />
+         -->
+        <TextView android:id="@+id/tv_abook" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="16.0sp"
+            android:layout_weight="1.0" android:gravity="center" android:text="@string/tv_chat_txl" android:textColor="#000000" />
+        
+        </LinearLayout>
+        <ImageView android:id="@+id/iv_cursor" android:layout_width="fill_parent" android:layout_height="wrap_content"
+         android:scaleType="matrix" android:src="@drawable/tab_selected"/>
+        <android.support.v4.view.ViewPager android:id="@+id/vp_main"  android:layout_width="fill_parent"
+         android:layout_height="fill_parent" android:background="@color/white"  android:layout_gravity="center"
+         android:flipInterval="30" android:persistentDrawingCache="animation"/>
+		    
+		    
+		    
+
+   </LinearLayout>  
+</RelativeLayout>

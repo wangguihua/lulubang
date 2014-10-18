@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"  android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="@color/white"
+    >
+<TextView android:text="@string/tv_do_price" android:layout_width="fill_parent" android:layout_marginTop="10dip"
+		  android:layout_height="wrap_content"  android:layout_marginLeft="15dip"
+		  android:textSize="18sp" android:textColor="@color/tab_select_color"/>
+<EditText android:id="@+id/et_price"  android:layout_width="fill_parent" android:layout_height="wrap_content"
+		  android:layout_margin="10dip" android:background="@drawable/bg_list_one_normal" android:inputType="numberDecimal"
+     android:maxLength="8"/>
+</LinearLayout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+<RelativeLayout 
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@color/white"
+	>
+	<ImageView android:id="@+id/iv_jian"  android:layout_width="wrap_content" android:layout_height="wrap_content"  
+	    android:layout_alignParentLeft="true"  android:layout_centerVertical="true" android:src="@drawable/iv_jian"
+	     android:layout_marginLeft="5dp" android:padding="3dip"/>
+	<LinearLayout
+	        android:layout_width="0px"
+	        android:layout_height="0px"
+	        android:focusable="true"
+	        android:focusableInTouchMode="true"
+	        />
+	<EditText android:id="@+id/et_price"  android:layout_width="fill_parent" android:layout_height="wrap_content"
+	      android:background="@drawable/bg_list_one_normal" android:inputType="numberDecimal"
+         android:maxLength="8" android:textSize="16sp" android:layout_centerVertical="true" android:text="0"
+  	      android:layout_toRightOf="@+id/iv_jian" android:layout_toLeftOf="@+id/iv_jia" android:layout_margin="5dp" 
+     />
+	<ImageView android:id="@+id/iv_jia"  android:layout_width="wrap_content" android:layout_height="wrap_content"  
+	    android:layout_alignParentRight="true"  android:layout_centerVertical="true" android:src="@drawable/iv_jia"
+	    android:layout_marginRight="5dp" android:padding="3dip"/>
+</RelativeLayout>
+
+<EditText android:gravity="top" android:id="@+id/et_content" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" 
+	android:hint="@string/hint_shuoming" android:maxLines="4" android:lines="4" android:singleLine="false"  android:textSize="14.0sp" android:focusable="true"/>
+	      
+</LinearLayout>      

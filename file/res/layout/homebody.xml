@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_below="@+id/ll_head" 
+    android:id="@+id/homebody1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@color/o_grey">
+	<FrameLayout android:id="@+id/adv_frame"  android:layout_width="fill_parent" android:layout_height="120dip"  >
+        <android.support.v4.view.ViewPager android:id="@+id/vp_main" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        
+        <!--  <RelativeLayout android:layout_width="fill_parent" android:layout_height="35.0dip" android:background="#33000000"
+            android:layout_gravity="bottom"   android:gravity="center_vertical" >
+            <TextView  android:id="@+id/tv_ads_title" android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:paddingLeft="10dip" android:textColor="@color/white"  android:layout_centerVertical="true"
+                 android:layout_alignParentLeft="true" />
+           
+             <LinearLayout android:layout_toRightOf="@+id/tv_ads_title"  android:layout_width="wrap_content"   android:layout_height="wrap_content" android:layout_centerVertical="true"
+                 android:gravity="right"   >
+                 <com.bycar.wgt.PageIndicatorView android:id="@+id/pv_main_map_list" android:layout_width="wrap_content" 
+                     android:layout_height="wrap_content"
+                />
+            </LinearLayout>
+        </RelativeLayout>-->
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="35.0dip"
+            android:layout_gravity="bottom"   android:gravity="center_vertical" >
+             <com.bycar.wgt.PageIndicatorView android:id="@+id/pv_main_map_list" android:layout_width="wrap_content" 
+                     android:layout_height="wrap_content" android:layout_centerInParent="true"
+                />
+         </RelativeLayout>
+        
+    </FrameLayout>
+    <ImageView  android:layout_width="fill_parent" android:layout_height="0.5px" android:src="@color/white"/>
+	<!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/o_grey" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+		    
+	<LinearLayout  android:id="@+id/ll_pinche"   android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+      android:paddingLeft="5dip" android:paddingRight="5dip"  android:gravity="center_vertical">
+    <LinearLayout  android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+		android:layout_marginTop="10dip" android:layout_marginBottom="10dip"  >
+        <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content"
+			 android:src="@drawable/icon_pinche"
+  	     />
+    </LinearLayout> 
+    <LinearLayout  android:layout_width="wrap_content"  android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:orientation="vertical" >
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"
+  		android:ellipsize="end" android:textColor="@color/black" android:textSize="16sp"
+  		android:layout_marginTop="10dip" android:text="@string/tv_pinche2" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false"
+  		android:layout_gravity="left" android:padding="1px" android:textSize="13sp"
+  		android:textColor="@color/grey" android:lineSpacingExtra="5dip" android:lineSpacingMultiplier = "1"
+  		android:layout_marginTop="3dip" android:maxLines="3" android:layout_marginBottom="10dip"
+  		 android:text="@string/tv_pinche_about"/>
+       
+    </LinearLayout>
+    </LinearLayout>
+	<ImageView  android:layout_width="fill_parent" android:layout_height="0.5px" android:src="@color/white"/>
+	
+	<LinearLayout  android:id="@+id/ll_daiyun"   android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+      android:paddingLeft="5dip" android:paddingRight="5dip" android:gravity="center_vertical" >
+    <LinearLayout  android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+		android:layout_marginTop="10dip" android:layout_marginBottom="10dip"  >
+        <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content"
+			 android:src="@drawable/icon_yunhuo"
+  	     />
+    </LinearLayout> 
+    <LinearLayout  android:layout_width="wrap_content"  android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:orientation="vertical" >
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"
+  		android:ellipsize="end" android:textColor="@color/black" android:textSize="16sp"
+  		android:layout_marginTop="10dip" android:text="@string/tv_daihuo2" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false"
+  		android:layout_gravity="left" android:padding="1px" android:textSize="13sp"
+  		android:textColor="@color/grey" android:lineSpacingExtra="5dip" android:lineSpacingMultiplier = "1"
+  		android:layout_marginTop="3dip" android:maxLines="3" android:layout_marginBottom="10dip"
+  		 android:text="@string/tv_daihuo_about"/>
+       
+    </LinearLayout>
+    </LinearLayout>
+	<ImageView  android:layout_width="fill_parent" android:layout_height="0.5px" android:src="@color/white"/>
+	<LinearLayout  android:id="@+id/ll_daijia"   android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+      android:paddingLeft="5dip" android:paddingRight="5dip"  android:gravity="center_vertical">
+    <LinearLayout  android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+		android:layout_marginTop="10dip" android:layout_marginBottom="10dip"  >
+        <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content"
+			 android:src="@drawable/icon_daijia"
+  	     />
+    </LinearLayout> 
+    <LinearLayout  android:layout_width="wrap_content"  android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:orientation="vertical" >
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"
+  		android:ellipsize="end" android:textColor="@color/black" android:textSize="16sp"
+  		android:layout_marginTop="10dip" android:text="@string/tv_daijia" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false"
+  		android:layout_gravity="left" android:padding="1px" android:textSize="13sp"
+  		android:textColor="@color/grey" android:lineSpacingExtra="5dip" android:lineSpacingMultiplier = "1"
+  		android:layout_marginTop="3dip" android:maxLines="3" android:layout_marginBottom="10dip"
+  		 android:text="@string/tv_daijia_about"/>
+       
+    </LinearLayout>
+    </LinearLayout>
+	<ImageView  android:layout_width="fill_parent" android:layout_height="0.5px" android:src="@color/white"/>
+	
+	<!-- 
+	<Button android:id="@+id/btn_push_product" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_margin="10.0dip" 
+       android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true"
+      android:text="@string/btn_push_product" android:textSize="18.0sp"   /> -->
+	
+	
+	 
+	<LinearLayout  android:id="@+id/ll_push_product"   android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+      android:paddingLeft="5dip" android:paddingRight="5dip"  android:gravity="center_vertical">
+    <LinearLayout  android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+		android:layout_marginTop="10dip" android:layout_marginBottom="10dip"  >
+        <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content"
+			 android:src="@drawable/icon_publishs"
+  	     />
+    </LinearLayout> 
+   <LinearLayout  android:layout_width="wrap_content"  android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:orientation="vertical" >
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"
+  		android:ellipsize="end" android:textColor="@color/black" android:textSize="16sp"
+  		android:layout_marginTop="10dip" android:text="@string/btn_push_product" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false"
+  		android:layout_gravity="left" android:padding="1px" android:textSize="13sp"
+  		android:textColor="@color/grey" android:lineSpacingExtra="5dip" android:lineSpacingMultiplier = "1"
+  		android:layout_marginTop="3dip" android:maxLines="3" android:layout_marginBottom="10dip"
+  		 android:text="@string/tv_push_product"/>
+       
+    </LinearLayout> 
+    </LinearLayout>
+	
+	<ImageView  android:layout_width="fill_parent" android:layout_height="0.5px" android:src="@color/white"/>
+	
+    </LinearLayout>        
+    </ScrollView>
+</LinearLayout>

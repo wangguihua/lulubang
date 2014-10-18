@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>29A97BF8-E695-4136-8368-CC3FEC75AD93</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BOCPLCI</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5FD6967BBEB76D65571E6973075CA6036F9CC8FC</key>
+		<string>https://github.com/wghwang/wenzhou_app.git</string>
+		<key>E8E5E359F43E50BBC91732AC2109A98DC8B23AC6</key>
+		<string>https://github.com/wghwang/ShangHai_App.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>code/BOCPLCI.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5FD6967BBEB76D65571E6973075CA6036F9CC8FC</key>
+		<string>../../..</string>
+		<key>E8E5E359F43E50BBC91732AC2109A98DC8B23AC6</key>
+		<string>../../../../ShangHai_App</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wghwang/wenzhou_app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5FD6967BBEB76D65571E6973075CA6036F9CC8FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E8E5E359F43E50BBC91732AC2109A98DC8B23AC6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ShangHai_App</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5FD6967BBEB76D65571E6973075CA6036F9CC8FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>wenzhou_app</string>
+		</dict>
+	</array>
+</dict>
+</plist>

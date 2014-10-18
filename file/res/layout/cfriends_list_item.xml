@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 头部 -->
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"  android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5dip">
+    <FrameLayout android:layout_width="40.0dip" android:layout_height="40.0dip" 
+        android:layout_margin="3.0dip" android:layout_alignParentLeft="true" android:id="@+id/ll_logo" >
+           <ImageView   android:id="@+id/iv_m_logo"  android:layout_width="fill_parent" android:layout_height="fill_parent" 
+            android:src="@drawable/tag_default_friend" />
+           <!-- <ImageView   android:id="@+id/iv_p_img"  android:layout_width="fill_parent" android:layout_height="fill_parent" /> -->
+    </FrameLayout>
+    
+    <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/ll_logo" >
+         <!-- 昵称 -->
+         <TextView android:id="@+id/tv_m_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/tv_m_time"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="14.0sp" android:text="robertchen"
+  	      />
+         <TextView android:id="@+id/tv_m_content"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_m_name"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30" android:ellipsize="end" android:singleLine="true"
+  	      />
+         <TextView android:id="@+id/tv_m_time"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+            
+           android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30"
+  	      android:layout_alignParentRight="true" android:layout_above="@+id/tv_m_content"/>
+         <FrameLayout android:layout_below="@+id/tv_m_content"  android:layout_width="fill_parent" android:layout_height="wrap_content">
+             <LinearLayout android:id="@+id/ll_m_one"  android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+                  <ImageView   android:id="@+id/iv_m_one"  android:layout_width="60dip" android:layout_height="60dip" 
+                    android:scaleType="centerCrop"  android:layout_margin="3dip" />
+                  <ImageView   android:id="@+id/iv_m_two"  android:layout_width="60dip" android:layout_height="60dip" 
+                    android:scaleType="centerCrop"   android:layout_margin="3dip"  />
+                  <ImageView   android:id="@+id/iv_m_three"    android:layout_width="60dip" android:layout_height="60dip" 
+                    android:scaleType="centerCrop"   android:layout_margin="3dip" />
+             </LinearLayout>
+             <ImageView   android:id="@+id/iv_m_ones"  android:layout_width="wrap_content" android:layout_height="180dip"  android:layout_margin="3dip"  
+              android:scaleType="fitStart"/>
+         </FrameLayout>
+         
+    </RelativeLayout>
+    <TextView android:id="@+id/tv_m_map_count"  android:layout_width="0dip" android:layout_height="0dip"/>
+</RelativeLayout>

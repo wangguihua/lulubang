@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/o_grey" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <!-- 地区名称 -->
+            <EditText android:id="@+id/et_addresstype_name"  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/xml_bg_list_one"
+	         android:layout_marginTop="8.0dip"   android:maxLength="30" android:layout_marginBottom="8.0dip" 
+	         android:textSize="14.0sp" android:hint="@string/hint_addresstype_name"/>
+            
+            <!-- 方法一：服务区域为行政区 -->
+            <TextView  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip"
+                  android:text="@string/tv_addresstype_tab1"  android:gravity="center_vertical"   android:layout_marginTop="10.0dip"/>
+            <!--<CheckBox android:textSize="14.0sp" android:textColor="#ff313131" android:id="@+id/cb_one" android:background="@null"
+                 android:paddingLeft="15.0dip" android:paddingRight="5.0dip" android:checked="true"   android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:button="@drawable/xml_checkbox" android:text="@string/tv_at_xzq_set"
+                  android:layout_marginTop="5.0dip"   android:layout_marginLeft="8.0dip"  android:layout_marginBottom="10.0dip"  />
+              -->
+            <LinearLayout android:layout_below="@+id/et_addresstype_name" android:id="@+id/ll_area"
+                android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginLeft="8.0dip"   
+                 android:layout_marginRight="8.0dip"  android:layout_width="fill_parent" android:layout_height="wrap_content"
+                 android:layout_marginBottom="8.0dip">
+               <TextView android:id="@+id/tv_sel_province" android:ellipsize="end"  android:background="@drawable/bg_search_addr_left" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                  android:hint="地区"  android:gravity="center_vertical"  android:singleLine="true" android:drawableRight="@drawable/bg_search_addr_down" android:layout_weight="1.0" />
+            
+               <TextView android:id="@+id/tv_sel_city" android:ellipsize="end"  android:background="@drawable/bg_search_addr_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                  android:hint="地区"  android:gravity="center_vertical"  android:singleLine="true" android:drawableRight="@drawable/bg_search_addr_down" android:layout_weight="1.0" />
+               <TextView android:id="@+id/tv_sel_county" android:ellipsize="end"  android:background="@drawable/bg_search_addr_right" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                  android:hint="地区" android:gravity="center_vertical" android:singleLine="true" android:drawableRight="@drawable/bg_search_addr_down" android:layout_weight="1.0" />
+             <!-- <TextView android:id="@+id/tv_sel_town" android:ellipsize="end"  android:background="@drawable/bg_search_addr_right" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                  android:hint="地区" android:singleLine="true" android:drawableRight="@drawable/bg_search_addr_down" android:layout_weight="1.0" />-->
+             </LinearLayout>
+            <!-- 地图
+            <FrameLayout android:layout_below="@+id/ll_area" android:layout_above="@+id/rl_shop"  android:layout_width="fill_parent" android:layout_height="fill_parent" >
+                <com.baidu.mapapi.MapView android:id="@+id/mMapView"  android:layout_width="fill_parent" android:layout_height="fill_parent" android:clickable="true"/>
+                <LinearLayout android:orientation="horizontal" android:layout_marginTop="8.0dip"  android:layout_marginLeft="8.0dip"  android:layout_marginRight="8.0dip"  
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                 >
+                 <Button android:id="@+id/btn_maker_cancle"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                     android:background="@drawable/bg_btn_verifycode_focus" android:textColor="@color/white" android:text="@string/btn_maker_cancle"/>
+                </LinearLayout>
+            </FrameLayout> 
+            <Button android:id="@+id/btn_area_map_set" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_margin="10.0dip" 
+            android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_area"
+              android:text="@string/btn_area_map_set" android:textSize="18.0sp"   />-->
+            <TextView  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip"
+                android:id="@+id/tv_addresstype_tab2"  android:gravity="center_vertical"   android:layout_marginTop="10.0dip"/>
+            
+            <LinearLayout android:id="@+id/rl_shop"  android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                android:layout_marginTop="5.0dip" android:layout_marginBottom="8.0dip" android:orientation="vertical" android:layout_below="@+id/btn_area_map_set">
+                
+                <LinearLayout android:orientation="horizontal" android:layout_marginBottom="10.0dip"  android:layout_marginLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+                   <CheckBox android:textSize="14.0sp" android:textColor="#ff313131" android:id="@+id/cb_two" android:background="@null" android:paddingLeft="15.0dip" android:paddingRight="5.0dip" android:checked="false"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/xml_checkbox" android:text="@string/cb_shop_near" />
+                   <EditText android:textSize="14.0sp" android:textColor="#ffe7822d" android:id="@+id/et_distance" android:background="@drawable/edit_box" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1000" android:singleLine="true" android:maxLength="5"  android:inputType="number" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131"  android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="米" android:singleLine="true" />
+                </LinearLayout>
+                
+                <LinearLayout android:layout_marginLeft="10.0dip"  android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                 >
+                 <TextView android:id="@+id/tv_shop_address" android:textSize="14.0sp" android:textColor="#ff313131" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_shop_address_tab" android:singleLine="false" />
+                
+                </LinearLayout>
+                
+                
+            </LinearLayout>
+            
+            <TextView  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip"
+                android:id="@+id/tv_addresstype_tab3"  android:gravity="center_vertical"   android:layout_marginTop="10.0dip"/>
+            
+            <LinearLayout  android:layout_width="fill_parent" android:layout_height="wrap_content"   android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" 
+                android:layout_marginBottom="8.0dip" android:orientation="vertical" android:layout_below="@+id/btn_area_map_set">
+                
+                <LinearLayout android:orientation="horizontal"  android:gravity="center_vertical"  android:layout_marginBottom="5.0dip"  android:layout_width="fill_parent" android:layout_height="wrap_content" >
+                   <CheckBox android:textSize="14.0sp"  android:textColor="#ff313131" android:id="@+id/cb_three" android:background="@null" android:paddingLeft="15.0dip" android:paddingRight="10.0dip" android:checked="false"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/xml_checkbox" android:text="@string/tv_at_map_set" />
+                   <!-- <EditText android:textSize="14.0sp" android:textColor="#ffe7822d" android:id="@+id/et_distance" android:background="@drawable/edit_box" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1000" android:singleLine="true" android:maxLength="5"  android:inputType="number" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131"  android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="米" android:singleLine="true" /> -->
+                   <Button android:id="@+id/btn_area_map_set" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_margin="10.0dip" 
+            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+              android:text="@string/btn_at_map_set" android:textSize="14.0sp"  />
+                </LinearLayout>
+                <ImageView  android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/at_map_demo" android:scaleType="matrix" />
+                
+                
+            </LinearLayout>
+            
+            
+            
+        </LinearLayout>        
+    </ScrollView>
+</RelativeLayout>

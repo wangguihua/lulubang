@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+     android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@color/white">
+     <TextView   android:layout_width="wrap_content" android:layout_height="wrap_content"  android:id="@+id/tv_addresstype" 
+         android:layout_marginTop="15.0dip"  android:layout_marginBottom="15.0dip"  android:layout_toLeftOf="@+id/iv_pa_arrrow" android:layout_alignParentLeft="true"
+         android:layout_centerVertical="true"   android:layout_marginLeft="10.0dip" android:gravity="center_vertical"
+	     android:textColor="@color/black" android:textSize="16.0dip"   /> 
+     <ImageView android:id="@+id/iv_pa_arrrow"   android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_centerVertical="true"  android:layout_alignParentRight="true" 
+	          android:src="@drawable/tag_right" android:scaleType="matrix"  android:layout_marginRight="10.0dip" android:layout_marginLeft="5.0dip" /> 
+	
+</RelativeLayout>

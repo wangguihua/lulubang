@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" android:layout_height="fill_parent"  android:orientation="vertical" >
+     <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/fl_disease"  >
+	    <LinearLayout android:layout_gravity="center"  android:layout_width="fill_parent"  android:layout_height="fill_parent"
+	      android:orientation="vertical"   android:background="@color/o_grey">
+	    <ListView android:id="@+id/lv_abooklist"  android:layout_width="fill_parent" android:layout_height="wrap_content"
+	   		android:scrollbars="none" />
+	     </LinearLayout>
+	<com.bycar.wgt.SideBar   android:id ="@+id/sideBar"  android:layout_height="wrap_content"  
+	    android:layout_width="20dp"   android:layout_gravity="right|center_vertical" android:background="@drawable/mm_text_bg_trans"
+	/> 
+     </FrameLayout>
+    
+</LinearLayout>

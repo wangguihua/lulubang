@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/o_grey" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		  
+		  <EditText android:gravity="top" android:id="@+id/et_content" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" 
+		      android:hint="@string/hint_publish_cfriends" android:maxLines="6" android:lines="6" android:singleLine="false"  android:textSize="14.0sp" />
+          
+          
+          <!-- 照片  -->
+          <RelativeLayout android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10dip" >
+       
+             <ImageView android:id="@+id/iv_map_one"  android:layout_width="45dip" android:layout_height="45dip"
+                android:src="@drawable/bg_add_image"  android:layout_centerVertical="true" />
+       
+             <ImageView android:id="@+id/iv_map_two"  android:layout_width="45dip" android:layout_height="45dip" android:layout_marginLeft="10dip" android:layout_marginRight="10dip"
+                android:layout_toRightOf="@+id/iv_map_one"   android:src="@drawable/bg_add_image"  android:layout_centerVertical="true" />
+             
+             <ImageView android:id="@+id/iv_map_three"  android:layout_width="45dip" android:layout_height="45dip"
+                android:layout_toRightOf="@+id/iv_map_two"   android:src="@drawable/bg_add_image"  android:layout_centerVertical="true" />
+       
+       
+          </RelativeLayout> 
+	      
+        </LinearLayout>        
+    </ScrollView>
+	
+</RelativeLayout>

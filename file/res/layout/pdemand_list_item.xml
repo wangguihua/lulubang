@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"  android:orientation="vertical"
+    android:padding="10dip" android:background="@drawable/list_bg">
+    <!-- 头部 -->
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/tv_show_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_btn_applyim" 
+	     android:layout_centerVertical="true" android:textColor="@color/white" android:textSize="14.0sp" 
+	     android:text="@string/tv_type_pinche" android:layout_alignParentLeft="true"
+  	     />
+        <TextView android:id="@+id/tv_m_time"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/tv_show_type"
+          android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30" android:layout_marginLeft="5dip" android:layout_centerVertical="true" 
+  	      />
+        <Button android:id="@+id/tv_toubiao_jy_comp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" 
+        android:background="@drawable/bg_btn_applyim"    android:layout_alignParentRight="true" android:text="@string/tv_toubiao_jy_comp"  android:textColor="@color/white"  android:textSize="12sp"/>
+    
+        <Button android:id="@+id/tv_p_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" 
+        android:background="@drawable/bg_btn_applyim"    android:layout_alignParentRight="true" android:text="@string/tv_p_edit"  android:textColor="@color/white"  android:textSize="12sp"/>
+        
+         <Button android:id="@+id/tv_js_map" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"  
+        android:background="@drawable/bg_btn_applyim"       android:textColor="@color/white"  android:textSize="12sp" android:layout_toRightOf="@+id/tv_m_time"/>  
+   
+    </RelativeLayout>
+    
+    
+    <ImageView  android:layout_width="fill_parent" android:layout_height="0.3dip" android:layout_marginTop="3dip"
+         android:scaleType="matrix" android:src="@color/grey" /> 
+    
+     <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tv_time_tab" android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_s_address"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_time" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+     </LinearLayout>
+     <LinearLayout  android:id="@+id/ll_count" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tv_count_tab" android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_s_address"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_count" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+     </LinearLayout>
+     <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tv_from_area_tab" android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_s_address"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_from_area" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+     </LinearLayout>
+     <LinearLayout android:gravity="center_vertical" android:orientation="horizontal"  android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_e_address"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_to_area" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+     </LinearLayout>
+    <ImageView  android:layout_width="fill_parent" android:layout_height="0.3dip" android:layout_marginTop="3dip"
+         android:scaleType="matrix" android:src="@color/grey" /> 
+    
+    
+    
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3dip">
+      <TextView android:id="@+id/tv_toubiao_tab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="16sp"
+           android:layout_alignParentLeft="true"   android:layout_centerVertical="true" 
+           android:text="0" android:textColor="@color/tab_select_color" />    
+        
+      <TextView android:id="@+id/tv_toubiao_tab2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp"
+            android:layout_centerVertical="true"   android:layout_toRightOf="@+id/tv_toubiao_tab"
+           android:text="@string/tv_toubiao_tab2" android:textColor="@color/black" />
+      <TextView android:id="@+id/tv_toubiao_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginLeft="5dip" android:gravity="center"
+        android:background="@drawable/bg_btn_applyim"    android:layout_toRightOf="@+id/tv_toubiao_tab2" android:text="@string/tv_toubiao"  android:textColor="@color/white"  android:textSize="12sp"/>
+     
+      
+     <Button android:id="@+id/tv_toubiao_cancle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"   
+        android:background="@drawable/bg_btn_applyim"   android:layout_toRightOf="@+id/tv_toubiao_state"   android:text="@string/tv_toubiao_cancle"  android:textColor="@color/white"  android:textSize="12sp"/>
+    
+     <Button android:id="@+id/tv_p_cancle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"  
+        android:background="@drawable/bg_btn_applyim"    android:layout_alignParentRight="true"   android:text="@string/tv_p_cancle"  android:textColor="@color/white"  android:textSize="12sp"/>
+    
+      </RelativeLayout> 
+    <TextView android:id="@+id/tv_d_map" android:layout_width="0dp" android:layout_height="0dp"/>
+    <TextView android:id="@+id/tv_d_state" android:layout_width="0dp" android:layout_height="0dp"/>
+     <TextView android:id="@+id/tv_type" android:layout_width="0dp" android:layout_height="0dp"/>
+     <TextView android:id="@+id/tv_code" android:layout_width="0dp" android:layout_height="0dp"/>
+     <TextView android:id="@+id/tv_state" android:layout_width="0dp" android:layout_height="0dp"/>
+     
+      <TextView android:id="@+id/tv_ok_state" android:layout_width="0dp" android:layout_height="0dp"/>
+    
+</LinearLayout>

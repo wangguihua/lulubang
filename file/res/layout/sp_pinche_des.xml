@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/o_grey" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+	       <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_name"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_sp_name" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+          </LinearLayout>
+		  
+	      <!--  <FrameLayout android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_pinche_price"  />
+                </LinearLayout>
+                <TextView android:textSize="14.0sp"  android:id="@+id/tv_sp_price"  android:textColor="@color/text_333" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" 
+                    android:layout_weight="1.0" android:inputType="numberDecimal" android:maxLength="12" />
+            </LinearLayout>
+            <TextView android:textColor="@color/text_666" android:textSize="14.0sp" android:gravity="left|center" android:layout_gravity="right|center" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="@string/tv_sp_pinche_price_rmb_tab"  />
+          </FrameLayout>-->
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_pinche_price"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:id="@+id/tv_price_set"  android:textColor="@color/text_333"  android:text="@string/tv_price_set" android:background="@drawable/tv_select_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_price_talk"  android:textColor="@color/text_333"  android:text="@string/tv_price_talk" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             
+          </LinearLayout> 
+           <LinearLayout  android:id="@+id/ll_price_set"  android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/bg_list_down_normal"  >
+                
+                <!-- <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_pinche_price"  android:textSize="14sp" android:visibility="invisible"/>
+                </LinearLayout> -->
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0"  android:gravity="center" android:background="@drawable/tv_unselect_bg" >
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131" android:background="@null" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:checked="false"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_pinche_one_p" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ffe7822d" android:id="@+id/et_price_one" android:background="@drawable/edit_box" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:singleLine="true" android:maxLength="3"  android:inputType="number" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131"  android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_rmb" android:singleLine="true" />
+                    </LinearLayout>
+                    
+                     <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0"  android:gravity="center" android:background="@drawable/tv_unselect_bg" >
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131" android:background="@null" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:checked="false"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_pinche_two_p" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ffe7822d" android:id="@+id/et_price_two" android:background="@drawable/edit_box" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:singleLine="true" android:maxLength="3"  android:inputType="number" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131"  android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_rmb" android:singleLine="true" />
+                    </LinearLayout>
+                    
+                     <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0"  android:gravity="center" android:background="@drawable/tv_unselect_bg" >
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131" android:background="@null" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:checked="false"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_pinche_three_p" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ffe7822d" android:id="@+id/et_price_three" android:background="@drawable/edit_box" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:singleLine="true" android:maxLength="3"  android:inputType="number" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131"  android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_rmb" android:singleLine="true" />
+                    </LinearLayout>
+                    
+                    
+                </LinearLayout>
+                
+               
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0"  android:gravity="center" android:background="@drawable/tv_unselect_bg" >
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131" android:background="@null" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:checked="false"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_pinche_four_p" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ffe7822d" android:id="@+id/et_price_four" android:background="@drawable/edit_box" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:singleLine="true" android:maxLength="3"  android:inputType="number" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131"  android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_rmb" android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_weight="1.0"   android:gravity="center" android:background="@drawable/tv_unselect_bg" >
+                    <TextView android:textSize="14.0sp" android:textColor="#ff313131" android:background="@null" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:checked="false"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_pinche_bc" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ffe7822d" android:id="@+id/et_price_bc" android:background="@drawable/edit_box" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:singleLine="true" android:maxLength="3"  android:inputType="number" />
+                   <TextView android:textSize="14.0sp" android:textColor="#ff313131"  android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_rmb" android:singleLine="true" />
+                    </LinearLayout>      
+                </LinearLayout>
+                
+                </LinearLayout>
+            </LinearLayout>
+          
+          
+          
+	      <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+         
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_time"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_start_time" android:text="08:30" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+            <TextView android:textColor="@color/text_999" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="@string/tv_sp_time_tab"  android:textSize="14sp"/>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_end_time" android:text="17:30" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+          </LinearLayout>
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_qunhao"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_sp_qunhao" android:inputType="number" android:maxLength="8"
+                android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+          </LinearLayout>
+	      
+          
+          
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_s_address"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_from_area"
+                android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+          </LinearLayout>
+           <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_e_address"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_to_area"  
+                android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+          </LinearLayout>
+          
+         
+	      
+         <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_bcsm"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_sp_bcsm" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" android:singleLine="false" android:maxLength="100"/>
+          </LinearLayout>
+          
+          
+        </LinearLayout>        
+    </ScrollView>
+</RelativeLayout>

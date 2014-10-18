@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:id="@+id/ll_account_main" 
+    android:background="@color/o_grey"  android:orientation="vertical" >
+    <!-- 头部 -->
+    <RelativeLayout android:id="@+id/rly_account"
+     android:layout_width="fill_parent" android:layout_height="wrap_content"
+     android:background="@drawable/list_bg"  android:layout_margin="10.0dip" >
+        <LinearLayout android:layout_width="60.0dip" android:layout_height="60.0dip"
+        android:layout_margin="3.0dip" android:layout_alignParentLeft="true" android:id="@+id/ll_logo" >
+        <ImageView   android:id="@+id/iv_m_logo"  android:layout_width="fill_parent" android:layout_height="fill_parent" 
+            android:src="@drawable/tag_default_friend" />
+        </LinearLayout>
+        <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/ll_logo"  >
+         <!-- 昵称 -->
+         <RelativeLayout android:id="@+id/ll_a_1" android:layout_marginTop="5.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip"
+         android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_alignParentTop="true">
+         <TextView android:id="@+id/tv_m_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingTop="3.0dip" android:paddingBottom="3.0dip" 
+         android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:textColor="@color/black" android:textSize="16.0sp"
+	      
+  	     />
+         <ImageView   android:id="@+id/iv_m_sex"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" 
+            android:src="@drawable/tag_sex_man"  android:layout_toRightOf="@+id/tv_m_name" android:layout_centerVertical="true" />
+         
+           <LinearLayout  android:layout_width="120px"  android:layout_height="wrap_content" android:layout_alignParentRight="true"  android:layout_centerVertical="true" >
+                <ImageView android:id="@+id/iv_star" android:layout_width="60px"  android:layout_height="wrap_content"  android:src="@drawable/tag_good_star" android:scaleType="matrix"/>
+             </LinearLayout>
+         </RelativeLayout>
+         <!-- 账户金额 -->
+         <RelativeLayout android:id="@+id/ll_a_2" android:layout_below="@+id/ll_a_1"  android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip"  
+         android:layout_width="fill_parent"  android:layout_height="wrap_content" >
+         <TextView android:id="@+id/tv_a_tab1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+	      android:layout_centerVertical="true" android:textColor="@color/grey" android:textSize="16.0sp" android:text="@string/tv_rmb_tab"
+  	     />
+         <TextView android:id="@+id/tv_m_rmb" android:layout_width="wrap_content" android:layout_height="wrap_content"
+	     android:layout_centerVertical="true" android:textColor="@color/grey" android:textSize="14.0sp" android:layout_toRightOf="@+id/tv_a_tab1"
+  	     />
+         </RelativeLayout>
+         <!-- 个性签名
+          <RelativeLayout android:id="@+id/ll_a_3" android:layout_below="@+id/ll_a_2"  android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip"  
+         android:layout_width="fill_parent"  android:layout_height="wrap_content" >
+         <TextView android:id="@+id/tv_m_sign" android:layout_width="fill_parent" android:layout_height="wrap_content"
+	     android:layout_centerVertical="true" android:textColor="@color/grey" android:textSize="14.0sp" android:text="@string/tv_sign_tab"
+  	     android:visibility="gone"/>
+          
+         </RelativeLayout>  -->  
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    
+    <!-- 申请未认证商家会员 -->
+    <RelativeLayout android:id="@+id/rl_apply_provider" android:background="@drawable/xml_bg_list_one" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <ImageView android:id="@+id/iv_sq_provider_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/tag_account_shop" android:layout_centerVertical="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@+id/btn_apply_provider" android:background="@drawable/bg_btn_applyim" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:text="@string/tv_apply_tab" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <Button android:textColor="#ff333333" android:id="@+id/btn_state" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/tv_apply_provider_tab" android:layout_toRightOf="@+id/iv_sq_provider_icon" android:layout_alignBottom="@+id/iv_sq_provider_icon" 
+               android:textSize="16.0sp" />
+    </RelativeLayout>
+        
+    <!-- 申请认证商家会员 -->
+    <RelativeLayout android:id="@+id/rl_apply_vprovider" android:background="@drawable/xml_bg_list_one" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <ImageView android:id="@+id/iv_sq_vprovider_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/tag_account_shop" android:layout_centerVertical="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@+id/btn_apply_vprovider" android:background="@drawable/bg_btn_applyim" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:text="@string/tv_apply_tab" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <Button android:textColor="#ff333333" android:id="@+id/btn_vstate" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/tv_apply_vprovider_tab" android:layout_toRightOf="@+id/iv_sq_vprovider_icon" android:layout_alignBottom="@+id/iv_sq_vprovider_icon" 
+               android:textSize="16.0sp" />
+    </RelativeLayout>
+    <!-- 我的商品 -->
+    <RelativeLayout android:id="@+id/rl_service" android:background="@drawable/xml_bg_list_one" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip">
+            <ImageView android:id="@+id/iv_service_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_send_rece" android:layout_centerVertical="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textColor="#ff333333" android:id="@+id/tv_service" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/tv_service_tab" 
+                android:layout_toRightOf="@+id/iv_service_icon" android:layout_alignBottom="@+id/iv_service_icon" android:textSize="16.0sp"  />
+    </RelativeLayout>
+    
+    <!-- 商家会员 的充值 提现 -->
+    <RelativeLayout android:id="@+id/rl_chongzhi" android:background="@drawable/xml_bg_list_up" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip">
+        <ImageView android:id="@+id/iv_chongzhi_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_recharge" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ff333333"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/tv_chongzhi_tab" 
+            android:layout_toRightOf="@+id/iv_chongzhi_icon" android:layout_alignBottom="@+id/iv_chongzhi_icon" android:textSize="16sp" />
+   </RelativeLayout>
+   <RelativeLayout android:id="@+id/rl_tixian" android:background="@drawable/xml_bg_list_under" android:layout_width="fill_parent" android:layout_height="50.0dip">
+         <ImageView android:id="@+id/iv_chongzhi_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_recharge" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ff333333"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/tv_tixian_tab" 
+            android:layout_toRightOf="@+id/iv_chongzhi_icon" android:layout_alignBottom="@+id/iv_chongzhi_icon" android:textSize="16sp" />
+   
+   </RelativeLayout>
+   
+   <!-- 我的常用地址 -->
+    <RelativeLayout android:id="@+id/rl_c_address" android:background="@drawable/xml_bg_list_one" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip">
+            <ImageView android:id="@+id/iv_c_address_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_address" android:layout_centerVertical="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textColor="#ff333333" android:id="@+id/tv_c_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/tv_address_tab" 
+                android:layout_toRightOf="@+id/iv_c_address_icon" android:layout_alignBottom="@+id/iv_c_address_icon" android:textSize="16.0sp"  />
+    </RelativeLayout>
+     <!-- 分享、邀请、关于 -->
+    <RelativeLayout android:id="@+id/rl_shared" android:background="@drawable/xml_bg_list_up" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip">
+        <ImageView android:id="@+id/iv_share_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/share_tag" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ff333333"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="分享给朋友" 
+            android:layout_toRightOf="@+id/iv_share_icon" android:layout_alignBottom="@+id/iv_share_icon" android:textSize="16sp" />
+          <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+   </RelativeLayout>
+   <RelativeLayout android:id="@+id/rl_invite" android:background="@drawable/xml_bg_list_middle" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@+id/iv_invite_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/invite_tag" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ff333333"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="邀请好友" 
+            android:layout_toRightOf="@+id/iv_invite_icon" android:layout_alignBottom="@+id/iv_invite_icon" android:textSize="16sp" />
+          <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+   
+   </RelativeLayout>
+   <RelativeLayout android:id="@+id/rl_about_llt" android:background="@drawable/xml_bg_list_under" android:layout_width="fill_parent" android:layout_height="50.0dip">
+       <ImageView android:id="@+id/iv_about_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/info_tag" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ff333333"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="关于路路帮" 
+            android:layout_toRightOf="@+id/iv_about_icon" android:layout_alignBottom="@+id/iv_about_icon" android:textSize="16sp" />
+          <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+   
+   </RelativeLayout>
+    
+    
+    <!-- 我的系统设置 -->
+    <RelativeLayout android:id="@+id/rl_c_system" android:background="@drawable/xml_bg_list_one" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip">
+            <ImageView android:id="@+id/iv_c_system_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/setting_tag" android:layout_centerVertical="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/tag_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textColor="#ff333333" android:id="@+id/tv_c_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/tv_system" 
+                android:layout_toRightOf="@+id/iv_c_system_icon" android:layout_alignBottom="@+id/iv_c_system_icon" android:textSize="16.0sp"  />
+    </RelativeLayout>
+    
+    <!-- 注销登录 -->
+    <Button android:id="@+id/btn_exit" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_margin="10.0dip" 
+       android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:gravity="center" 
+      android:text="@string/btn_exit" android:textSize="18.0sp"   />
+    
+    <!-- 退出程序 -->
+    <Button android:id="@+id/btn_exit_app" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_margin="10.0dip" 
+       android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:gravity="center" 
+      android:text="@string/btn_exit_app" android:textSize="18.0sp"   />
+        
+    
+</LinearLayout>

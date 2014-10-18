@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5dip">
+    <!-- 昵称 -->
+    <TextView android:id="@+id/tv_c_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="15.0sp" android:text="robertchen"
+  	      android:layout_marginTop="5dip" android:layout_marginBottom="3dip"/>
+    
+    <TextView android:id="@+id/tv_c_do"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"
+         android:layout_alignParentRight="true"  android:textColor="@color/white" android:textSize="13.0sp" android:text="@string/tv_invite_to_do" 
+  	     android:background="@drawable/bg_btn_login" />
+    <TextView android:id="@+id/tv_c_state"  android:layout_width="0dip" android:layout_height="0dip"  />
+</RelativeLayout>

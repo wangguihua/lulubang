@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_app" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+         android:layout_marginTop="10.0dip" android:layout_marginRight="10dip">
+      <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip">
+          <TextView android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                    android:layout_marginLeft="10.0dip" android:text="@string/tv_pay_type_tab"  android:textSize="16sp"/>
+      </LinearLayout>
+            <TextView  android:id="@+id/tv_pay_type0"  android:textColor="@color/text_333"  android:text="@string/tv_pay_type0" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_pay_type1"  android:textColor="@color/text_333"  android:text="@string/tv_pay_type1" android:background="@drawable/tv_select_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+            
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" >
+        <TextView android:id="@+id/tab_pj" android:gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="10.0dip" android:text="@string/tv_dc_pinjia_tab" android:textSize="16sp"/>
+        <CheckBox  android:textSize="16.0sp" android:textColor="#ffe7822d" android:layout_alignParentRight="true" android:layout_marginTop="10.0dip" 
+            android:id="@+id/cb_tousu" android:background="@null" android:paddingRight="20.0dip" android:paddingLeft="20.0dip" android:checked="false" 
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/xml_checkbox" android:text="@string/tv_tousu" />
+        
+    </RelativeLayout>
+    <RatingBar android:id="@+id/ratingbar" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:progress="1" android:numStars="5" android:rating="5.0" android:stepSize="1.0" style="@style/RatingBarStyle" />
+    <EditText android:gravity="top" android:id="@+id/et_content" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" 
+        android:hint="@string/hint_dc_pinjia_tab" android:maxLines="6" android:lines="6" android:singleLine="false" android:textSize="16sp" />
+    
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:layout_above="@+id/ll_foot"  android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/white" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <!-- <ImageView android:id="@+id/iv_qz_map"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dip"
+              android:src="@drawable/welcome"  android:scaleType="matrix"  android:layout_gravity="center_horizontal" android:paddingLeft="3dip" android:paddingRight="3dip"/>
+             -->
+            <TextView  android:id="@+id/tv_qz_map"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5dip" android:text="@string/tv_qzmap"
+                android:textColor="@color/tab_select_color" android:textSize="16sp"/>
+            <ImageView android:id="@+id/iv_qz_map"  android:layout_width="fill_parent" android:layout_height="wrap_content"  android:scaleType="matrix" 
+                android:background="@drawable/no_photo" android:gravity="" android:layout_marginTop="5dip"/>
+        </LinearLayout>        
+    </ScrollView>
+    <LinearLayout android:id="@+id/ll_foot"  android:orientation="horizontal" android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_gravity="center_horizontal">
+        <!-- 信息 -->
+          <Button android:id="@+id/btn_des" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_margin="10.0dip" 
+            android:layout_width="fill_parent" android:layout_height="wrap_content"  android:gravity="center" 
+            android:text="详细信息" android:textSize="16.0sp"  android:layout_weight="1.0" />
+          
+          <!-- 交易完成 -->
+          <Button android:id="@+id/btn_jy_comp" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_margin="10.0dip" 
+            android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center" android:layout_weight="1.0"  
+            android:text="@string/btn_jy_comp" android:textSize="16.0sp"   />
+    </LinearLayout>
+</RelativeLayout>

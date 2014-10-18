@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    
+    
+    <FrameLayout android:layout_below="@+id/ll_head" android:layout_width="fill_parent" android:layout_height="fill_parent" >
+        <com.baidu.mapapi.MapView android:id="@+id/mMapView"  android:layout_width="fill_parent" android:layout_height="fill_parent" android:clickable="true"/>
+                
+        <LinearLayout android:id="@+id/ll_view"  android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+                 />        
+                
+        <LinearLayout android:orientation="horizontal" android:layout_marginTop="8.0dip"  android:layout_marginLeft="8.0dip"  android:layout_marginRight="8.0dip"  
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                 >
+                 <Button android:id="@+id/btn_maker_cancle"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                     android:background="@drawable/bg_btn_verifycode_focus" android:textColor="@color/white" android:text="@string/btn_maker_cancle"/>
+        </LinearLayout>
+    </FrameLayout> 
+</RelativeLayout>

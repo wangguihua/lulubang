@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+    <rule type="mobile" pattern="^\d{1,15}$" tip="手机号由1-15位数字组成" />
+    <rule type="loginName" pattern="^[\w_]{6,20}$" tip="用户名长度为6-20位由数字、字母、下划线组成" />
+</rules>

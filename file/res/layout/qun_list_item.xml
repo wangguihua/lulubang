@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5dip">
+    
+    
+    <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content"
+         android:layout_toLeftOf="@+id/tv_q_type" >
+         <!-- 昵称 -->
+         <TextView android:id="@+id/tv_q_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="15.0sp" android:text="robertchen"
+  	      android:layout_marginTop="5dip" android:layout_marginBottom="3dip"/>
+         <TextView android:id="@+id/tv_q_code"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_q_name"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30" 
+  	      />
+    </RelativeLayout>
+     <TextView android:id="@+id/tv_q_type"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"
+         android:layout_alignParentRight="true"  android:textColor="@color/white" android:textSize="13.0sp" android:text="@string/tv_m_qun_zhu" 
+  	     android:background="@drawable/bg_btn_applyim" />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/o_grey" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+	   <!-- 驾照类型  -->
+	   <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/xml_bg_list_up" android:layout_marginTop="10.0dip" >   
+	   <EditText android:id="@+id/et_driver_type"  android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+	     android:background="@null" android:paddingLeft="80.0dip"  android:paddingRight="10.0dip"
+	     android:maxLength="30"  android:textSize="14.0sp"/>  
+       <TextView android:textSize="14.0sp" android:textColor="@color/grey" android:gravity="center_vertical"  
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip"
+		    android:text="@string/tv_tab_driver_type"  android:layout_alignLeft="@+id/et_driver_type" android:layout_alignTop="@+id/et_driver_type" android:layout_alignBottom="@+id/et_driver_type" />
+       </RelativeLayout> 
+       <!-- 驾照证号  -->
+       <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/xml_bg_list_middle" >   
+	   <EditText android:id="@+id/et_driver_code"  android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+	      android:background="@null"   android:paddingRight="10.0dip" android:inputType="number" 
+	     android:paddingLeft="80.0dip"  android:maxLength="18" android:textSize="14.0sp" />  
+       <TextView android:textSize="14.0sp" android:textColor="@color/grey" android:gravity="center_vertical"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip"
+		    android:text="@string/tv_tab_driver_code"  android:layout_alignLeft="@+id/et_driver_code" android:layout_alignTop="@+id/et_driver_code" android:layout_alignBottom="@+id/et_driver_code" />
+       </RelativeLayout> 
+       <!-- 发证时间  -->
+       <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/xml_bg_list_middle" >   
+	   <TextView android:id="@+id/et_driver_time"  android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+	      android:background="@null"   android:paddingRight="10.0dip" 
+	     android:paddingLeft="80.0dip"  android:maxLength="18" android:textSize="14.0sp" />  
+       <TextView android:textSize="14.0sp" android:textColor="@color/grey" android:gravity="center_vertical"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip"
+		    android:text="@string/tv_tab_driver_time"  android:layout_alignLeft="@+id/et_driver_time" android:layout_alignTop="@+id/et_driver_time" android:layout_alignBottom="@+id/et_driver_time" />
+       </RelativeLayout> 
+       <!-- 车的型号 
+       <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/xml_bg_list_middle" >   
+	   <EditText android:id="@+id/et_driver_car"  android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+	      android:background="@null"   android:paddingRight="10.0dip" 
+	     android:paddingLeft="80.0dip"  android:maxLength="18" android:textSize="14.0sp" />  
+       <TextView android:textSize="14.0sp" android:textColor="@color/grey" android:gravity="center_vertical"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip"
+		    android:text="@string/tv_tab_driver_car"  android:layout_alignLeft="@+id/et_driver_car" android:layout_alignTop="@+id/et_driver_car" android:layout_alignBottom="@+id/et_driver_car" />
+       </RelativeLayout>   -->	   
+       <!-- 图片  -->
+       <RelativeLayout android:background="@drawable/xml_bg_list_under" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+       
+       <TextView android:id="@+id/tv_driver_map_tab"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true" android:textColor="@color/grey" android:gravity="center_vertical" 
+	    android:layout_marginRight="15.0dip"  
+	    android:textSize="14.0sp"  android:text="@string/tv_tab_driver_map"  
+  	   />
+       
+       
+      <ImageView android:id="@+id/iv_driver_map"  android:layout_width="60dip" android:layout_height="60dip"
+           android:layout_toRightOf="@+id/tv_driver_map_tab"   android:src="@drawable/bg_add_image"  android:layout_centerVertical="true" />
+       
+       </RelativeLayout> 
+
+        </LinearLayout>        
+    </ScrollView>
+   
+</RelativeLayout>

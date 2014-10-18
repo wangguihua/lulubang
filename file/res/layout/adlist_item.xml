@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  android:paddingTop="10.0dip"  android:paddingBottom="10.0dip"  
+     android:layout_width="fill_parent" android:layout_height="wrap_content"  >
+     <ImageView android:id="@+id/iv_marker"   android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_centerVertical="true"  android:layout_alignParentLeft="true" 
+	          android:src="@drawable/icon_location" android:scaleType="matrix"  android:layout_marginRight="10.0dip" android:padding="5dip"  android:layout_marginLeft="5.0dip" /> 
+	
+	 <TextView   android:id="@+id/tv_address"   android:layout_width="wrap_content" android:layout_height="wrap_content"
+         android:layout_toLeftOf="@+id/iv_pa_arrrow"  android:layout_toRightOf="@+id/iv_marker" 
+         android:layout_marginLeft="10.0dip"  android:singleLine="false" android:layout_centerVertical="true"  
+	     android:textColor="@color/white" android:textSize="14sp" android:text="12333"  /> 
+     <ImageView android:id="@+id/iv_pa_arrrow"   android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_centerVertical="true"  android:layout_alignParentRight="true" 
+	          android:src="@drawable/icon_edit" android:scaleType="matrix"  android:layout_marginRight="10.0dip" android:padding="5dip"  android:layout_marginLeft="5.0dip" /> 
+	
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <com.bycar.wgt.TouchImageView  android:layout_below="@+id/ll_head"  android:id="@+id/tiv_map"   android:layout_width="fill_parent"   android:layout_height="fill_parent"  
+           android:src="@drawable/default_maps"  android:scaleType="fitCenter" /> 
+</RelativeLayout>

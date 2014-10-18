@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/o_grey" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		    
+		<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/bg_list_one_normal" android:layout_marginTop="10.0dip">
+        <LinearLayout android:layout_width="40.0dip" android:layout_height="40.0dip" 
+        android:layout_margin="3.0dip" android:layout_alignParentLeft="true" android:id="@+id/ll_logo" >
+           <ImageView   android:id="@+id/iv_m_logo"  android:layout_width="fill_parent" android:layout_height="fill_parent" 
+            android:src="@drawable/tag_default_friend" />
+        </LinearLayout>
+        <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/ll_logo" android:layout_toLeftOf="@+id/tv_show_type"  android:layout_centerVertical="true">
+         <!-- 昵称 -->
+         <TextView android:id="@+id/tv_m_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="14.0sp" android:text="robertchen"
+  	      />
+         
+         <TextView android:id="@+id/tv_m_time"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_m_name"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30"
+  	      />
+         <TextView android:id="@+id/tv_t_count"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_m_name"
+            android:layout_alignParentRight="true"  android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30"
+  	      />
+        </RelativeLayout>
+        
+        
+         </RelativeLayout>
+		    
+		    <!-- 出发地 和 目的地 -->
+		    
+		    <LinearLayout android:id="@+id/ll_from_ad" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/bg_list_up_normal" android:layout_marginTop="10.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_s_address" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_333" android:id="@+id/tv_from_area" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="30.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            
+		    <LinearLayout android:id="@+id/ll_to_ad"   android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/bg_list_down_normal"  android:layout_centerVertical="true">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_e_address" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_333" android:id="@+id/tv_to_area" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="30.0dip" android:singleLine="false" android:layout_weight="1.0" />
+            </LinearLayout>
+		   <!-- 拼车时间 和 人数 -->
+		    
+	       <LinearLayout android:id="@+id/ll_pinche_time" android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_pinche_time"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_pinche_time" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+          </LinearLayout>
+          
+	       <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_pinche_man_count"  android:textSize="14sp"/>
+            </LinearLayout>
+             <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_pinche_count" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+          </LinearLayout>
+           <!-- 注意选项
+	       <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_notice_op"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:id="@+id/tv_ntop_one"  android:textColor="@color/text_333"  android:text="@string/tv_ntop_one" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_ntop_two"  android:textColor="@color/text_333"  android:text="@string/tv_ntop_two" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_ntop_three"  android:textColor="@color/text_333"  android:text="@string/tv_ntop_three" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+            
+          </LinearLayout>  -->
+          <!-- 补充说明 
+	      <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_bcsm"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_bcsm" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" android:singleLine="false" android:maxLength="100"/>
+          </LinearLayout>-->
+	        <!-- 补充说明 
+	      <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_bcsm_content"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_bcsm" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" android:singleLine="false" android:maxLength="100"/>
+          </LinearLayout>
+           <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_bcsm_maps"  android:textSize="14sp"/>
+            </LinearLayout>
+             <ImageView android:id="@+id/iv_map_one"  android:layout_width="45dip" android:layout_height="45dip"
+           android:src="@drawable/bg_add_image"  android:layout_centerVertical="true"  android:layout_weight="1.0"  />
+              <ImageView android:id="@+id/iv_map_two"  android:layout_width="45dip" android:layout_height="45dip"
+            android:src="@drawable/bg_add_image"  android:layout_centerVertical="true" android:layout_weight="1.0"  />
+               <ImageView android:id="@+id/iv_map_three"  android:layout_width="45dip" android:layout_height="45dip"
+           android:src="@drawable/bg_add_image"  android:layout_centerVertical="true"  android:layout_weight="1.0" />
+           
+          </LinearLayout>-->
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_bcsm_content"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_bcsm" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" android:singleLine="false" android:maxLength="100"/>
+            <ImageView android:id="@+id/iv_map_one"  android:layout_width="40dip" android:layout_height="40dip"
+              android:src="@drawable/bg_addmap"  android:layout_centerVertical="true"    android:paddingLeft="3dip" android:paddingRight="3dip"/>
+          </LinearLayout>
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_notice_op"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:id="@+id/tv_ntop_one"  android:textColor="@color/text_333"  android:text="@string/tv_ntop_one" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_ntop_two"  android:textColor="@color/text_333"  android:text="@string/tv_ntop_two" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_ntop_three"  android:textColor="@color/text_333"  android:text="@string/tv_ntop_three" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+          </LinearLayout>
+	      
+        </LinearLayout>        
+    </ScrollView>
+</RelativeLayout>

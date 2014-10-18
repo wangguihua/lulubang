@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10dip"
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+		    <TextView  android:textColor="@color/black" android:gravity="left" android:id="@+id/tv_n_content" android:background="@null" 
+		          android:layout_width="fill_parent" android:layout_height="fill_parent"  android:textSize="14sp"  />
+         
+	       
+	      
+        </LinearLayout>        
+    </ScrollView>
+</RelativeLayout>

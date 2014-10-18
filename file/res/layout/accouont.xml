@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/account_header" />
+    <!-- body -->
+    <ScrollView  android:layout_width="fill_parent" android:layout_height="fill_parent"  android:layout_below="@+id/ll_head"
+		android:fillViewport="true" android:scrollbars="none" >
+	<include layout="@layout/accountbody" />
+    </ScrollView>
+</RelativeLayout>

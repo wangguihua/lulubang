@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/ll_head" android:layout_alignParentTop="true"
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/header_bg" >
+    <Button android:id="@+id/btn_account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginLeft="5.0dip"  
+        android:textColor="@color/white" android:textSize="13.0sp" android:layout_alignParentLeft="true" android:background="@drawable/icon_account"
+        android:paddingRight="10dip" />
+   
+    <TextView  android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_centerVertical="true"
+            android:textColor="@color/white" android:textSize="18.0sp"  android:layout_centerInParent="true" 
+            android:text="@string/tv_d_title" />
+    <ImageView android:id="@+id/iv_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginRight="5.0dip"  
+        android:src="@drawable/icon_menu"    android:layout_alignParentRight="true"  android:paddingLeft="10dip" android:paddingRight="15dip"  android:paddingTop="5dip" android:paddingBottom="5dip" />
+    
+    <RelativeLayout  android:id="@+id/rl_msg"  android:layout_marginRight="5.0dip" android:layout_toLeftOf="@+id/iv_menu"
+         android:layout_width="50px" android:layout_height="50px"     android:layout_centerVertical="true" >
+          <ImageView  android:id="@+id/iv_msg"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+           android:src="@drawable/icon_msg" android:layout_alignParentRight="true" android:layout_centerVertical="true"  />
+          
+          <ImageView  android:id="@+id/iv_noread"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+           android:src="@drawable/noread"  android:visibility="gone"  />
+         
+     </RelativeLayout>
+    <!--   <ImageView  android:id="@+id/iv_msg"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dip"
+           android:src="@drawable/icon_msg"  android:layout_centerVertical="true" android:layout_toLeftOf="@+id/iv_menu" android:paddingLeft="10dip" android:paddingRight="10dip" />
+   <ImageView android:id="@+id/iv_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginRight="5.0dip" 
+        android:background="@drawable/icon_refresh"    android:layout_alignParentRight="true" android:paddingLeft="15dip" android:paddingRight="15dip" android:paddingTop="5dip" android:paddingBottom="5dip" />
+    -->
+</RelativeLayout>

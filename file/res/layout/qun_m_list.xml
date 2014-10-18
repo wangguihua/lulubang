@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body 群信息-->
+    <RelativeLayout  android:layout_below="@+id/ll_head" android:id="@+id/ll_head2" 
+        android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/bg_list_one_normal" android:layout_marginTop="10.0dip">
+         <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content"
+         android:layout_centerVertical="true">
+         <!-- 昵称 -->
+         <TextView android:id="@+id/tv_q_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="14.0sp" android:text="robertchen"
+  	      />
+         
+         <TextView android:id="@+id/tv_q_code"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_q_name"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30"
+  	      />
+         <TextView android:id="@+id/tv_q_time" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	      android:layout_alignParentRight="true"  android:textColor="@color/grey" android:textSize="12.0sp"  android:gravity="center"
+	     android:text="@string/tv_type_pinche"  android:layout_above="@+id/tv_q_count"
+  	     />
+         <TextView android:id="@+id/tv_q_count"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_q_name"
+            android:layout_alignParentRight="true"  android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30"
+  	      />
+        </RelativeLayout>
+        
+    </RelativeLayout>
+    
+    
+    <RelativeLayout android:layout_below="@+id/ll_head2" android:id="@+id/ll_head3" android:background="@drawable/bg_list_one_normal"
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="5dip" android:layout_marginTop="10.0dip">
+    <FrameLayout android:layout_width="40.0dip" android:layout_height="40.0dip"  android:layout_centerVertical="true"
+        android:layout_margin="5.0dip" android:layout_alignParentLeft="true" android:id="@+id/ll_logo" >
+           <ImageView   android:id="@+id/iv_m_logo"  android:layout_width="fill_parent" android:layout_height="fill_parent" 
+            android:src="@drawable/tag_default_friend" />
+           
+    </FrameLayout>
+    
+    <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/ll_logo" >
+        
+         <TextView android:id="@+id/tv_m_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/tv_m_time"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="14.0sp" android:text="robertchen"
+  	      android:layout_marginTop="5dip" android:layout_marginBottom="3dip"/>
+         <TextView android:id="@+id/tv_m_mobile"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_m_name"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30" 
+  	      />
+    </RelativeLayout>
+     <TextView android:id="@+id/tv_m_type"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"
+         android:layout_alignParentRight="true"  android:textColor="@color/white" android:textSize="13.0sp" android:text="@string/tv_m_qun_zhu" 
+  	     android:background="@drawable/bg_btn_applyim" android:layout_marginRight="5dip"/>
+    </RelativeLayout>
+    <ImageView android:layout_marginTop="10.0dip"  android:id="@+id/ll_head4"  android:layout_below="@+id/ll_head3" 
+        android:layout_width="fill_parent" android:layout_height="0.3dip" 
+            android:src="@color/tab_select_color" />
+     <ListView android:id="@+id/lv_list" android:layout_width="fill_parent" android:layout_height="fill_parent" 
+           android:layout_below="@+id/ll_head4" android:background="@color/white" 
+            android:cacheColorHint="@color/transparent" android:fastScrollEnabled="true"  />
+	
+</RelativeLayout>

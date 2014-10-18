@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/ll_list_ct"
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+    android:layout_marginTop="5dip" android:layout_marginBottom="5dip" android:background="@color/transparent">
+     
+    <TextView android:id="@+id/tv_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" 
+         android:gravity="center"  android:textSize="14sp" android:textColor="@color/black" android:padding="3dip" 
+         android:background="@drawable/tv_name_xml"
+         android:layout_marginLeft="5dip" android:layout_marginRight="5dip"  android:layout_gravity="center_vertical" />
+</LinearLayout>

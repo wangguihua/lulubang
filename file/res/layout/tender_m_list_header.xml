@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/ll_head" android:layout_alignParentTop="true"
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/header_bg" >
+    <TextView  android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_centerVertical="true"
+            android:textColor="@color/white" android:textSize="18.0sp"  android:layout_centerInParent="true" 
+            android:text="@string/tv_account2"/>
+    <Button android:id="@+id/btn_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginLeft="5.0dip"  
+        android:background="@drawable/btn_back"    android:layout_alignParentLeft="true"  />
+    <Button android:id="@+id/btn_demand_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginLeft="5.0dip"  
+        android:background="@drawable/bg_btn_next"    android:layout_toLeftOf="@+id/iv_menu" android:text="@string/tv_demand_des_tab" android:textColor="@color/white"/>
+     <ImageView android:id="@+id/iv_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginLeft="1.0dip"  
+        android:src="@drawable/icon_menu"    android:layout_alignParentRight="true"  android:paddingLeft="10dip" android:paddingRight="15dip"  android:paddingTop="5dip" android:paddingBottom="5dip" />
+</RelativeLayout>

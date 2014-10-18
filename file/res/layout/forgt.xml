@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/forgt_header" />
+    <include layout="@layout/forgt_steps" />
+    <LinearLayout android:orientation="vertical" android:id="@+id/rl_step_1"   
+         android:layout_below="@+id/ll_header" android:layout_width="fill_parent"  android:layout_height="fill_parent">
+        <EditText android:id="@+id/et_mobile"  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/bg_list_one_normal"
+	         android:padding="10.0dip"  android:layout_margin="20.0dip" android:maxLength="11"  android:inputType="phone" 
+	         android:textSize="14.0sp"/>
+        
+        
+         <Button  android:id="@+id/btn_getacode" android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" 
+             android:background="@drawable/bg_btn_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip"
+             android:text="@string/btn_get_acode"  />
+    </LinearLayout>
+    
+    <RelativeLayout android:id="@+id/rl_step_2" android:layout_below="@+id/ll_header" android:visibility="gone"
+        android:layout_width="fill_parent"  android:layout_height="fill_parent">
+        <EditText android:id="@+id/et_checkcode"  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/bg_list_one_normal"
+	         android:padding="10.0dip"  android:layout_margin="20.0dip" android:maxLength="6"  android:inputType="number" 
+	         android:textSize="14.0sp"/>
+        <Button android:id="@+id/btn_next_step" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip"
+             android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_below="@+id/et_checkcode"
+             android:text="@string/btn_next" android:textSize="14.0sp" android:gravity="center"  android:layout_marginBottom="20.0dip" />
+        
+         <Button android:id="@+id/btn_reset_code" android:background="@drawable/bg_btn_verifycode_focus" android:paddingLeft="10dip" android:paddingRight="10dip"
+              android:paddingTop="5dip" android:paddingBottom="5dip" android:textColor="@color/grey"
+             android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true"  android:layout_below="@+id/btn_next_step"
+             android:text="" android:textSize="14.0sp" android:gravity="center" android:enabled="false"/>
+     </RelativeLayout>
+     
+     <RelativeLayout android:id="@+id/rl_step_3" android:layout_below="@+id/ll_header"  android:visibility="gone"
+        android:layout_width="fill_parent"  android:layout_height="fill_parent">
+         
+         <EditText android:id="@+id/et_password"  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/bg_list_one_normal"
+	       android:paddingLeft="80.0dip" android:paddingTop="10.0dip"  android:paddingBottom="10.0dip" android:paddingRight="10.0dip" 
+	        android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		    android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="5.0dip"
+		    android:maxLength="16"  android:inputType="textPassword" android:textSize="14.0sp"/>
+        <TextView android:textSize="12.0sp" android:textColor="@color/grey" android:gravity="center_vertical" android:paddingLeft="8.0dip" 
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip"
+		    android:text="@string/tv_password"  android:layout_alignLeft="@+id/et_password" android:layout_alignTop="@+id/et_password" android:layout_alignBottom="@+id/et_password" />
+        <EditText android:id="@+id/et_repassword"  android:layout_width="fill_parent"  android:layout_height="wrap_content" android:background="@drawable/bg_list_one_normal"
+	       android:paddingLeft="80.0dip" android:paddingTop="10.0dip"  android:paddingBottom="10.0dip" android:paddingRight="10.0dip" android:layout_below="@+id/et_password"
+	       android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		   android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip"  android:layout_marginTop="5.0dip"  
+		   android:maxLength="16"  android:inputType="textPassword" android:textSize="14.0sp"/>
+        <TextView android:textSize="12.0sp" android:textColor="@color/grey" android:gravity="center_vertical" android:paddingLeft="8.0dip" 
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip"
+		    android:text="@string/tv_repassword"  android:layout_alignLeft="@+id/et_repassword" android:layout_alignTop="@+id/et_repassword" 
+		    android:layout_alignBottom="@+id/et_repassword" />
+        <Button android:id="@+id/btn_reg" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip"
+             android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_below="@+id/et_repassword"
+             android:text="@string/btn_reset" android:textSize="14.0sp" android:gravity="center"/>
+      
+    </RelativeLayout>
+    
+     
+     <RelativeLayout android:id="@+id/rl_step_4" android:layout_below="@+id/ll_header" android:visibility="gone"
+        android:layout_width="fill_parent"  android:layout_height="fill_parent">
+        <TextView android:id="@+id/tv_resulte"  android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_centerHorizontal="true"
+	         android:layout_marginTop="20.0dip" android:layout_marginBottom="5.0dip"  android:gravity="center_horizontal"
+	         android:textSize="18.0sp" android:textColor="@color/green"  android:text="@string/tv_tab_regresult3" android:drawablePadding="10.0dip"/>
+         
+        <Button android:id="@+id/btn_into_app" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip"
+             android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_below="@+id/tv_resulte"
+             android:text="@string/btn_into_login" android:textSize="14.0sp" android:gravity="center"/>
+        
+    </RelativeLayout>
+    
+    
+</RelativeLayout>

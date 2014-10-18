@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ListView
+     android:id="@+id/lv_evaluationlist" android:layout_width="fill_parent" android:layout_height="fill_parent"  
+     android:layout_below="@+id/ll_head"  android:cacheColorHint="@color/transparent" android:paddingLeft="5.0dip" android:paddingRight="5.0dip"
+     android:background="@color/o_grey" android:fastScrollEnabled="true" android:divider="@null" android:dividerHeight="5.0dip"
+      android:layout_above="@+id/ll_foot" 
+     />
+    
+    <RelativeLayout  android:gravity="center_vertical"  android:id="@+id/ll_foot"  android:layout_width="fill_parent" android:layout_height="wrap_content" 
+        android:layout_alignParentBottom="true" android:background="@color/white" android:paddingTop="5.0dip" android:paddingBottom="5.0dip">
+       
+         <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_toLeftOf="@+id/btn_send" android:background="@drawable/bg_list_one_normal"
+              android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            
+            <EditText android:id="@+id/et_content"  android:textColor="@color/text_333" android:gravity="left"  android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                 android:layout_weight="1.0" android:textSize="14sp" android:singleLine="false" android:maxLength="100"/>
+          </LinearLayout>
+        <Button  android:id="@+id/btn_send" android:textColor="@color/white" android:gravity="center"  android:background="@drawable/bg_btn_applyim" android:layout_width="wrap_content"
+             android:layout_height="wrap_content" android:text="@string/btn_send" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textSize="14sp" />
+            
+    </RelativeLayout>
+  
+</RelativeLayout>

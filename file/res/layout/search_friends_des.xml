@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+	<RelativeLayout android:id="@+id/rl_head2" android:layout_below="@+id/ll_head" android:background="@drawable/bg_list_one_normal"
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8dip">
+    <RelativeLayout android:layout_width="50.0dip" android:layout_height="50.0dip"  android:layout_centerVertical="true"
+        android:layout_margin="3.0dip" android:layout_alignParentLeft="true" android:id="@+id/ll_logo" >
+           <ImageView   android:id="@+id/iv_m_logo"  android:layout_width="fill_parent" android:layout_height="fill_parent" 
+            android:src="@drawable/tag_default_friend" />
+           
+    </RelativeLayout>
+    
+    <RelativeLayout  android:layout_width="fill_parent"  android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/ll_logo" >
+         <!-- 昵称 -->
+         <TextView android:id="@+id/tv_m_name"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/tv_m_time"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="14.0sp" android:text="robertchen"
+  	     android:layout_marginTop="5dip" android:layout_marginBottom="3dip"/>
+  	    <ImageView   android:id="@+id/iv_m_sex"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" 
+            android:src="@drawable/tag_sex_man"  android:layout_toRightOf="@+id/tv_m_name"  />
+  	     
+         <TextView android:id="@+id/tv_m_mobile"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_m_name"
+         android:layout_alignParentLeft="true"  android:textColor="@color/grey" android:textSize="13.0sp" android:text="下午 03:30" 
+  	      />
+          <TextView android:id="@+id/tv_m_sign" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_m_mobile"
+	     android:layout_centerVertical="true" android:textColor="@color/grey" android:textSize="14.0sp" android:text="@string/tv_sign_tab"
+  	     />
+    </RelativeLayout>
+    
+    </RelativeLayout>
+    
+	<!-- 添加到通讯录 -->
+    <Button android:id="@+id/btn_add_to_abook" android:textColor="@color/white" android:background="@drawable/bg_btn_login" android:layout_margin="10.0dip" 
+      android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:gravity="center" 
+      android:text="@string/btn_add_to_abook" android:textSize="18.0sp" android:layout_below="@+id/rl_head2"  />
+    
+</RelativeLayout>

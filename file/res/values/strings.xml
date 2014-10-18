@@ -1,0 +1,885 @@
+<resources>
+
+    <string name="app_name">路路帮</string>
+    <string name="app_id">503d6674</string>
+    <string name="app_about">关于路路帮</string>
+    <string name="app_web_url">http://115.29.236.88/</string>
+    <string name="app_exit">再按一次退出程序</string>
+    <string name="app_img_path">/sdcard/lulubang/img/</string>
+    <string name="app_server_m_img_path">/files/m_logo/</string>
+    <string name="app_server_apk_up_path">/files/apk_up/</string>
+    <string name="app_server_adv_img_path">/files/adv/</string>
+    <string name="app_server_map_img_path">/files/map/</string>
+     <string name="app_tmp_path">/sdcard/lulubang/</string>
+    <string name="app_db_folder">/sdcard/lulubang/db/</string>
+    <string name="app_db_path">/sdcard/lulubang/db/bycar.db</string>
+   
+    
+    <string name="tv_pay_type_tab">支付方式&#160;:</string>
+    <string name="tv_pay_type0">余额支付</string>
+    <string name="tv_pay_type1">现金支付</string>
+    <string name="err_pay_one">余额不足，请选择现金支付！</string>
+    
+    <string name="tv_map_show_title">地图显示</string>
+    
+    <string name="tv_s_unselect">未选标</string>
+    <string name="tv_s_doing">进行中</string>
+    
+    
+    <string name="tv_s_complete">已完成/已取消</string>
+    
+    <string name="tv_s_untou">未投标</string>
+    
+    
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开加载数据</string>
+    
+    <string name="tv_add_friend">加为好友</string>
+    <string name="tv_at_xzq_set">行政区设置</string>
+    <string name="tv_at_map_set">地图区域设置</string>
+    <string name="btn_at_map_set">区域标记</string>
+    
+    <string name="tv_map_mark_add">添加标记</string>
+    <string name="tv_map_mark_save">修改标记</string>
+     
+    <!--  <string name="err_p_jieche_nomap">接车需要客户拍照取证！</string>-->
+    <string name="err_jieche_nomap">接车需要拍照取证！</string>
+    <string name="err_shangche_nomap">上车车需要拍照取证！</string>
+    <string name="err_shoujian_nomap">收件需要拍照取证！</string>
+      
+    
+    <string name="err_vipsp_address_change">vip服务不能修改出发地和目的地！</string>
+    
+     <string name="tv_demand_des_tab">详细</string>
+    
+    
+     <string name="tv_setting_tab">设置</string>
+     <string name="err_p_nomap">请拍照先！</string>
+    <string name="btn_area_map_set">地图区域标记</string>
+    
+     <string name="tv_qzmap">拍照人像、证件或实物上传，更有安全保障。</string>
+    <string name="tv_addresstype_tab1">首先要确认服务区域所在的行政区域。行政区域要覆盖设定的服务区域，可以用下面两种方法设定更精确的服务区域。</string>
+    
+    <string name="tv_addresstype_tab2"><Data><![CDATA[ <b><font color="#ff7700">方法一</font></b> ：以设置的定点地址为圆心，一定长为半径的圆为服务范围，超出上面设定的行政区域无效。]]></Data></string>
+    <string name="tv_addresstype_tab3"><Data><![CDATA[ <b><font color="#ff7700">方法二</font></b> ：在地图上设置几个点，以这几个点（按顺序）为顶点的多边形内部为服务范围，超出上面设定的行政区域无效。]]></Data></string>
+    
+    <string name="hint_goods_price">注&#160;:&#160;货物价值是赔款重要依据，但可能提高服务费。</string>
+    
+    <!--  
+    <string name="experience_plan">        路路帮提供国内新一代手机应用营销工具，企业能在短时间建立一个独有的移动营销平台，具有快速完成、性价比高、用户体验优异，平台覆盖多、轻量化管理等优势。英诺APP致力帮助企业拓展新的移动营销渠道及品牌传播，具有提升品牌和市场营销价值。</string>
+    <string name="app_vision">版本：V1.0.0</string>
+    <string name="app_copyringht">Copyright©2012 Innouni.com</string>
+    <string name="app_allringht">All Right Reserved</string>
+    <string name="app_conpanyname">温州科技有限公司</string>-->
+    
+    <string name="app_noadv">没有广告信息！</string>
+    
+    <string name="tv_new_friend_apply">新朋友的申请</string>
+    <string name="hint_apply_info">输入验证信息</string>
+    <string name="tv_apply_info_title">验证信息</string>
+    
+    <string name="tv_apply_info_agree">同意</string>
+    <string name="tv_apply_info_unagree">拒绝</string>
+    
+    <string name="tv_tousu"> 投诉</string>
+    
+     <string name="app_chongzhi">路路帮会员充值</string>
+     
+      <string name="tv_invite_title">邀请好友</string>
+       <string name="tv_invite_to_do">&#160;邀&#160;请&#160;</string>
+     
+     <string name="err_chongzhi_fail">会员充值失败</string>
+     <string name="err_chongzhi_suss">会员充值成功</string>
+     <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_message">需求</string>
+    <string name="tab_talk">消息</string>
+    <string name="tab_shop">商家</string>
+    <string name="tab_me">我的</string>
+    <string name="tab_product">服务</string>
+    
+    
+    <string name="tv_account">个人中心</string>
+    <string name="tv_rmb_tab">账户金额&#160;:&#160;</string>
+     <string name="tv_sign_tab">暂无签名</string>
+    <string name="tv_chongzhi_tab">我要充值</string>
+    <string name="tv_tixian_tab">我要提现</string>
+    <string name="tv_apply_provider_tab">申请成为服务商家</string>
+    <string name="tv_apply_vprovider_tab">申请成为认证服务商家</string>
+    <string name="tv_tab_tos_tab">我的服务</string>
+    
+    <string name="tv_sale_tab">卖家信誉&#160;:&#160;</string>
+     <string name="tv_buy_tab">买家信誉&#160;:&#160;</string>
+     <string name="tv_tendprice_tab">会员报价&#160;:&#160;</string>
+    
+    <string name="err_daihuo_rz">实名认证以后才能发布快递服务！</string>
+    <string name="err_daijia_rz">驾照认证以后才能发布代驾服务！</string>
+    <string name="err_pinche_rz">驾照认证和车型认证以后才能发布拼车服务！</string>
+    
+    <string name="tv_price_set">价格设置</string>
+    <string name="tv_price_talk">议价</string>
+    
+    <string name="tv_sss_type_tab">服务分类&#160;:&#160;</string>
+    
+    <string name="tv_apply_tab">立即申请</string>
+    <string name="tv_address_tab">常用地址管理</string>
+    <string name="tv_address_title">常用地址</string>
+    <string name="tv_address_add">添加</string>
+    <string name="tv_address_add_t">添加常用地址</string>
+    <string name="hint_addresst_name">输入常用地址名称</string>
+    <string name="err_addresst_name_is_null">常用地址名称不能为空！</string>
+     <string name="err_exist_address_name">常用地址名称已经被使用！</string>
+    <string name="tv_address_add_et">修改常用地址</string>
+      <string name="tv_tixian_apply">提现申请</string>
+    
+    <string name="btn_address_type">服务区域</string>
+    <string name="btn_shop_address">店铺地址</string>
+    
+    <string name="btn_sale_fangwei">经营范围</string>
+    <string name="tv_sale_area_hint">请输入经营范围</string>
+    <string name="toast_sale_area_is_null">请输入经营范围！</string>
+    
+    <string name="btn_company_web">公司主页</string>
+     <string name="tv_company_web_hint">请输入公司主页</string>
+      <string name="toast_company_web_is_null">请输入公司主页！</string>
+    
+    <string name="tv_server_product">服务列表</string>
+    <string name="btn_push_product">参与服务</string>
+    <string name="btn_push_product2">发布</string>
+    <string name="tv_server_set">服务设置</string>
+    
+    <string name="tv_product">发布</string>
+    <string name="tv_demand">需求</string>
+    
+    <string name="btn_add_addresstype">添加</string>
+    <string name="tv_addresstype">区域分类</string>
+    <string name="btn_edit_addresstype">编辑</string>
+    <string name="tv_addresstype_add">添加区域分类</string>
+    <string name="tv_addresstype_edit">编辑区域分类</string>
+     <string name="tv_addresstype_view">查看区域分类</string>
+    
+    <string name="hint_addresstype_name">输入区域分类名称</string>
+     <string name="btn_maker_cancle">取消标记</string>
+     <string name="tv_maker_cancle_title">选择取消标记</string>
+      <string name="tv_maker_tab">标记</string>
+      <string name="tv_maker_cancle_tab">(已取消)</string>
+     <string name="btn_pro_cancle">取消上一步</string>
+    
+    <string name="tv_addresstype_dg">操作</string>
+    <string name="tv_addresstype_dg_del">删除区域分类</string>
+    <string name="tv_addresstype_dg_cancel">取消</string>
+    
+    <string name="tv_do_title">操作</string>
+    <string name="tv_sp_del">删除服务</string>
+    <string name="tv_do_cancel">取消</string>
+     
+   
+    
+    <string name="cb_shop_near">定点周边</string>
+    
+    <string name="tv_shop_address_tab">定点地址还没设置，请点击设置</string>
+    <string name="tv_shop_address_toast">请先设置定点地址！</string>
+    <string name="hint_dts_address">输入具体地址</string>
+    <string name="tv_shop_address_set">店铺地址设置</string>
+    
+    <string name="toast_addresstype_name_is_null">请输入区域分类名称！</string>
+    <string name="toast_dingdian_is_null">请设置定点地址！</string>
+    <string name="toast_shop_distance_is_null">请输入定点周边的距离米数！</string>
+    <string name="toast_area_maker_not_enough">区域标记至少3个以上！</string>
+    
+    <string name="btn_exit">注销登录</string>
+    <string name="btn_exit_app">退出程序</string>
+    <string name="tv_account2">个人信息</string>
+    
+     <string name="tv_tab_rz_info">认证信息</string>
+    <string name="tv_tab_base_info">基本信息</string>
+    <string name="tv_tab_privacy_info">隐私信息</string>
+    <string name="tv_tab_driver_info">驾照信息</string>
+    
+    <string name="tv_tab_baojia">交易报价&#160;:&#160;</string>
+    
+    <string name="tv_tab_mobile_rz">手机认证&#160;:&#160;</string>
+    <string name="tv_tab_idcard_rz">身份认证&#160;:&#160;</string>
+    <string name="tv_tab_driver_rz">驾照认证&#160;:&#160;</string>
+    <string name="tv_tab_cartype_rz">车型认证&#160;:&#160;</string>
+    <string name="tv_tab_compnay_rz">公司认证&#160;:&#160;</string>
+    
+    <string name="tv_tab_sex3">性别:&#160;</string>
+    <string name="tv_tab_birthday3">生日&#160;:&#160;</string>
+    
+    <string name="tv_tab_chebao_y">&#160;,有车保</string>
+    <string name="tv_tab_chebao_n">&#160;,无车保</string>
+    
+    <string name="tv_tab_nicheng">昵称</string>
+    <string name="tv_tab_mobile2">手机号</string>
+    <string name="tv_tab_password3">密码</string>
+    <string name="tv_tab_sex">性别</string>
+    <string name="tv_tab_birthday">出生日期</string>
+    <string name="tv_tab_sign">个性签名</string>
+    
+    <string name="tv_tab_work">职业</string>
+    <string name="tv_tab_school">学校</string>
+    <string name="tv_tab_gr_about">个人说明</string>
+    
+    <string name="tv_tab_shop_address">店铺地址&#160;:&#160;</string>
+    <string name="tv_tab_sale_area">经营范围&#160;:&#160;</string>
+    <string name="tv_tab_company_web">公司主页&#160;:&#160;</string>
+    
+    
+    <string name="tv_tab_sex2">性&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;别&#160;:&#160;</string>
+    <string name="tv_tab_birthday2">出生日期&#160;:&#160;</string>
+    <string name="tv_tab_sign2">个性签名&#160;:&#160;</string>
+    
+    <string name="tv_tab_work2">职&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;业&#160;:&#160;</string>
+    <string name="tv_tab_school2">学&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;校&#160;:&#160;</string>
+    <string name="tv_tab_gr_about2">报价说明&#160;:&#160;</string>
+    
+    <string name="tv_tab_work3">会员职业&#160;:&#160;</string>
+    <string name="tv_tab_renzheng">认证状况&#160;:&#160;</string>
+    
+    <string name="tv_tab_realname">真实姓名</string>
+    <string name="tv_tab_idcard">身份证号</string>
+    <string name="tv_tab_hunyin">婚姻状况</string>
+    <string name="tv_tab_company">公司</string>
+    
+    <string name="tv_tab_realname3">真实姓名&#160;:&#160;</string>
+    <string name="tv_tab_idcard3">身份证号&#160;:&#160;</string>
+    <string name="tv_tab_hunyin3">婚姻状况&#160;:&#160;</string>
+    <string name="tv_tab_company3">公&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;司&#160;:&#160;</string>
+    
+    <string name="tv_tab_driver_type2">驾照类型&#160;:&#160;</string>
+    <string name="tv_tab_driver_time2">发证时间&#160;:&#160;</string>
+    <string name="tv_tab_driver_code2">驾照证号&#160;:&#160;</string>
+    <string name="tv_tab_driver_car2">车的型号&#160;:&#160;</string>
+    
+    
+    
+    <string name="tv_tab_realname2">&#160;真实姓名&#160;:&#160;</string>
+    <string name="tv_tab_idcard2">&#160;身份证号&#160;:&#160;</string>
+    <string name="tv_tab_idcard_map">&#160;身份证照片&#160;:&#160;</string>
+    
+    <string name="tv_tab_driver_type">&#160;驾照类型&#160;:&#160;</string>
+    <string name="tv_tab_driver_time">&#160;发证时间&#160;:&#160;</string>
+    <string name="tv_tab_driver_code">&#160;驾照证号&#160;:&#160;</string>
+    <string name="tv_tab_driver_car">&#160;车的型号&#160;:&#160;</string>
+    <string name="tv_tab_driver_map">&#160;驾照照片&#160;:&#160;</string>
+    
+    <string name="tv_tab_company2">&#160;公司名称&#160;:&#160;</string>
+    <string name="tv_tab_company_type">&#160;公司类型&#160;:&#160;</string>
+    <string name="tv_tab_company_address">&#160;公司地址&#160;:&#160;</string>
+    <string name="tv_tab_company_map">&#160;资料照片&#160;:&#160;</string>
+    
+     <string name="tv_tab_cartype">&#160;车的型号&#160;:&#160;</string>
+     <string name="tv_tab_cpz">&#160;车拍照&#160;:&#160;</string>
+     <string name="tv_tab_xsz">&#160;行驶证&#160;:&#160;</string>
+     <string name="tv_tab_fapiao">&#160;保险发票&#160;:&#160;</string>
+     
+     
+    <string name="tv_apply_idcard_info">身份认证信息</string>
+    <string name="tv_apply_driver_info">驾照认证信息</string>
+     <string name="tv_apply_cartype_info">车型认证信息</string>
+    <string name="tv_apply_company_info">公司认证信息</string>
+    
+    <string name="tv_tab_jiazhenleixing">驾照类型</string>
+    <string name="tv_tab_fafangshijian">发放时间</string>
+    <string name="tv_tab_chedexinghao">车的型号</string>
+    
+    <string name="toast_realname_is_null">请输入真实姓名！</string>
+    <string name="toast_idcardcode_is_null">请输入身份证号！</string>
+    <string name="toast_idcardcodemap_is_null">请上传身份证照片！</string>
+    <string name="toast_drivermap_is_null">请上传驾照照片！</string>
+    
+    <string name="toast_driver_type_is_null">请输入驾照类型！</string>
+    <string name="toast_driver_time_is_null">请输入发放时间！</string>
+    <string name="toast_driver_code_is_null">请输入驾照证号！</string>
+    <string name="toast_driver_car_is_null">请输入车的型号！</string>
+    
+    <string name="toast_company_is_null">请输入公司名称！</string>
+     <string name="toast_company_type_is_null">请输入公司类型！</string>
+      <string name="toast_company_address_is_null">请输入公司地址！</string>
+     <string name="toast_companymap_is_null">请上传驾照照片！</string>
+     
+     <string name="toast_cartype_is_null">请输入车的型号！</string>
+     <string name="toast_cpzmap_is_null">请上传车拍照照片！</string>
+     <string name="toast_xszmap_is_null">请输入行驶证照片！</string>
+     <string name="toast_fapiaomap_is_null">请上传保险发票照片！</string>
+    
+    <string name="tv_system">系统设置</string>
+    <string name="tv_rmb">元</string>
+    <string name="tv_man">男</string>
+    <string name="tv_woman">女</string>
+     
+     <string name="pdialog_mlogo_set"> 设置头像</string> 
+     <string name="pdialog_mmap_set"> 设置上传图片</string> 
+    <string name="pdialog_getmap_from_local">选择本地图片</string> 
+    <string name="pdialog_photograph">拍照</string> 
+    <string name="pdialog_exit_question"> 确定要退出吗?</string> 
+     
+    <string name="tv_t_nicheng">昵称修改</string>
+    <string name="tv_t_password">密码修改</string>
+    <string name="tv_t_mobile">绑定手机修改</string>
+    <string name="tv_t_sign">个性签名修改</string>
+    <string name="tv_t_school">学校修改</string>
+    <string name="tv_t_ge_about">个人说明修改</string>
+    
+    <string name="btn_comp">完成</string>
+    <string name="tv_t_nicheng_hint">输入昵称</string>
+    <string name="err_exist_addresstype_name">区域分类名称已经被使用！</string>
+    
+    <string name="tv_t_password_hint">输入新密码</string>
+    <string name="tv_t_repassword_hint">输入确认密码</string>
+    
+    <string name="tv_t_sign_hint">输入个性签名</string>
+    <string name="tv_t_grabout_hint">输入个人说明</string>
+    <string name="tv_t_school_hint">输入学校名称</string>
+    
+    <string name="tv_w_student">在校学生</string>
+    <string name="tv_w_gworker">固定工作者</string>
+    <string name="tv_w_zworker">自由职业者</string>
+    <string name="tv_w_dworker">待业/无业/失业</string>
+    <string name="tv_w_eworker">退休</string>
+   
+    <string name="tv_m_unmarried">未婚</string>
+    <string name="tv_m_married">已婚</string>
+    <string name="tv_m_divorce">离异</string>
+    <string name="tv_m_other">其他</string>
+    
+    <string name="tv_apply_vprovider">认证商家申请</string>
+    
+    <string name="tv_apply_idcard">身份认证</string>
+    <string name="tv_apply_idcard_about">用于提升账号的安全性和信任级别。认证后的有卖家记录的账号不能修改认证信息。</string>
+    <string name="tv_apply_driver">驾照认证</string>
+    <string name="tv_apply_driver_about">用于提升账号的安全性和信任级别。认证后的有卖家记录的账号不能修改认证信息。</string>
+     <string name="tv_apply_cartype">车型认证</string>
+    <string name="tv_apply_cartype_about">用于提升账号的安全性和信任级别。认证后的有卖家记录的账号不能修改认证信息。</string>
+    <string name="tv_apply_company2">公司认证</string>
+    <string name="tv_apply_company">公司信息认证</string>
+    <string name="tv_apply_company_about">用于提升账号的安全性和信任级别。认证后的有卖家记录的账号不能修改认证信息。</string>
+    <string name="tv_apply_tab2">申请</string>
+    <string name="tv_apply_check">审核中</string>
+    <string name="tv_apply_edit">修改</string>
+    
+    
+    <string name="btn_login">登录</string>
+    <string name="tv_login">登录账户</string>
+    <string name="tv_reg">注册账户</string>
+    <string name="btn_prev">上一步</string>
+    <string name="btn_next">下一步</string>
+    <string name="btn_get_acode">获取验证码</string>
+    <string name="tv_resetpassword">密码重设</string>
+    
+    
+    <string name="cb_tab_agree">同意并接受  </string>
+    <string name="tv_tab_tos">《注册服务条款》</string>
+    <string name="tv_tab_tos2">服务条款</string>
+    <string name="tv_username">&#160;会员昵称&#160;:&#160;</string>
+    <string name="tv_password">&#160;设置密码&#160;:&#160;</string>
+    <string name="tv_repassword">&#160;确认密码&#160;:&#160;</string>
+    
+    <string name="tv_tab_mobile">输入手机号</string>
+    <string name="tv_tab_activation">输入验证码</string>
+    <string name="tv_tab_password">设置密码</string>
+    <string name="tv_tab_regresult">注册成功</string>
+    <string name="tv_tab_password2">重设密码</string>
+    <string name="tv_tab_regresult2">重设成功</string>
+    <string name="tv_tab_regresult3">密码重设成功</string>
+    
+    <string name="btn_into_app">进入App</string>
+     <string name="btn_continue_info">完善资料</string>
+     <string name="btn_break">跳过</string>
+     <string name="btn_help_info">帮助教程</string>
+    <string name="btn_into_login">返回登录试试</string>
+    <string name="toast_err_agree">请勾选同意注册条款！</string>
+    <string name="toast_write_mobile">请输入手机号！</string>
+    <string name="toast_err_mobile">手机号不正确！</string>
+    <string name="toast_checkcode_is_null">请输入验证码！</string>
+    <string name="toast_username_is_null">请输入昵称！</string>
+    <string name="toast_password_is_null">请输入密码！</string>
+    <string name="toast_repassword_is_null">请输入确认密码！</string>
+    <string name="toast_password_not_sam">密码与确认密码不一致！</string>
+    <string name="toast_sign_is_null">请输入个性签名！</string>
+    <string name="toast_about_is_null">请输入个人说明！</string>
+    <string name="toast_school_is_null">请输入学校名称！</string>
+    
+    <string name="toast_address_is_null1">请输入具体地址！</string>
+    
+    <string name="hint_login_username">输入手机号</string>
+    <string name="hint_login_password">请输入6-16位密码</string>
+    <string name="btn_login_s">立即登录</string>
+    <string name="btn_reg">免费注册</string>
+    <string name="btn_reset">确认设置</string>
+    <string name="tv_forg_password">忘记密码?</string>
+    <string name="tv_login_byself">自动登录  </string>
+    <string name="err_empty_account">请输入手机号！</string>
+    <string name="err_empty_password">请输入密码！</string>
+    <string name="err_lenght_password">密码长度必须6个字符以上！</string>
+    <string name="pdialog_data_check">数据验证中&#8230;</string>  
+     <string name="map_upload_suf">图片上传成功！</string> 
+    <string name="map_upload_failure">图片上传失败！</string> 
+    <string name="err_nosdcard_for_save">未找到存储卡，无法存储照片！</string>
+    <string name="pdialog_map_upload">图片上传中&#8230;</string> 
+    
+    <string name="err_empty_mobile">手机号 不能为空！</string>
+    <string name="err_isexist_mobile">该手机号已被其他用户使用！</string>
+    <string name="err_get_vcode_f">验证码获取失败！</string>
+    <string name="err_empty_vcode">验证码不能为空！</string>
+    <string name="err_vcode_notright">验证码不正确！</string>
+    <string name="err_password_len">密码长度必须6个字符以上！</string>
+    <string name="err_password_mobile">密码不能为手机号！</string>
+    
+    <string name="err_not_vcode">手机号未经过验证！</string>
+    <string name="err_empty_username">昵称不能为空！</string>
+    <string name="err_exist_username">昵称已经被使用！</string>
+    <string name="err_empty_password2">密码不能为空！</string>
+    <string name="err_reg_f">注册失败！</string>
+    <string name="err_reset_f">密码重设失败！</string>
+    
+    <string name="tel_call_p">拨打</string>
+     <string name="tv_tel_tab1">寄件人电话&#160;:&#160;</string>
+     <string name="tv_tel_tab2">收件人电话&#160;:&#160;</string>
+    
+     <string name="tv_pinche2">拼车  专车</string>
+    <string name="tv_pinche">拼车</string>
+    <string name="tv_daijia">代驾</string>
+    <string name="tv_daihuo">快递</string>
+    <string name="tv_daihuo2">快递  物流</string>
+    <string name="tv_pinche_about">出租车、私家车、客车。同城拼车、长途拼车、接送机场车站 。</string>
+    <string name="tv_daijia_about">酒后代驾、商务代驾、旅游代驾、司机外派 。</string>
+    <string name="tv_daihuo_about">同城快递、跑腿代购、搬家搬运、全国快递、物流托运 。</string>
+    <string name="tv_push_product">优质服务需要您的参与！诚招各地代理商!</string>
+    
+     <string name="btn_help">帮助</string>
+    
+     <string name="tv_p_address3">出发地址</string>
+     <string name="tv_star">*</string>
+     <string name="tv_mhao">&#160;:</string>
+     
+    <string name="tv_p_address">取件地址</string>
+    <string name="tv_p_address2">目的地址</string>
+    
+    <string name="tv_p_time">取件时间</string>
+    <string name="tv_p_time2">拼车时间</string>
+    <string name="tv_p_pc_count">拼车人数</string>
+    <string name="tv_p_goodsweight">货物重量</string>
+    
+    <string name="tv_p_time3">代驾时间</string>
+     <string name="tv_p_chetype">车的类型</string>
+    
+    <string name="tv_sp_title">选择服务类型</string>
+     <string name="tv_sp_title_pc">发布拼车服务</string>
+     <string name="tv_sp_title_dh">发布带货服务</string>
+     <string name="tv_sp_title_dj">发布代驾服务</string>
+     
+     <string name="tv_map_sreach">地图查找</string>
+     <string name="tv_no_select">不限</string>
+     <string name="load_tips">地址加载中...</string>
+     
+     <string name="tv_add_new_adtype">添加新服务区域</string>
+     
+     
+     <string name="tv_sp_title_pc_et">修改拼车服务</string>
+     <string name="tv_sp_title_dh_et">修改带货服务</string>
+     <string name="tv_sp_title_dj_et">修改代驾服务</string>
+     
+    <string name="tv_sp_name">服务名称&#160;:</string>
+    <string name="tv_sp_pinche_price">拼车价格&#160;:</string>
+    <string name="tv_sp_pinche_price_rmb_tab">元/人</string>
+    <string name="tv_sp_time">服务时间&#160;:</string>
+    <string name="tv_sp_time_tab">&#160;至&#160;</string>
+    <string name="tv_sp_qunhao">关联群号(信息发到群的每人)&#160;:</string>
+    <string name="tv_sp_s_address">出发地址&#160;:</string>
+    <string name="tv_sp_s_address2">取件地址&#160;:</string>
+    <string name="tv_sp_e_address">目的地址&#160;:</string>
+    <string name="tv_sp_bcsm">补充说明&#160;:</string>
+    
+    <string name="tv_sp_lucheng">公里</string>
+    <string name="tv_sp_bcsm_content">说明内容&#160;:</string>
+    <string name="tv_sp_bcsm_maps">说明图片&#160;:</string>
+    
+    <string name="tv_shop_pj_tab">商家评价&#160;:</string>
+    <string name="tv_pj_about_tab">评价内容&#160;:</string>
+    <string name="tv_god_pj_tab">客户评价&#160;:</string>
+    
+  
+    
+    <string name="tv_sp_apply_vip">申请VIP服务并同意</string>
+    <string name="tv_sp_daihuo_price">带货价格&#160;:</string>
+    <string name="tv_sp_daihuo_price_rmb_tab">元/千克</string>
+    
+    <string name="tv_sp_daijia_price">代驾价格&#160;:</string>
+    <string name="tv_sp_daijia_price_rmb_tab">元</string>
+    
+    <string name="tv_tab_rmb_account">账户余额&#160;:&#160;</string>
+    <string name="tv_tab_alipay_account">支付宝账号&#160;:&#160;</string>
+    <string name="tv_tab_tixian_price">提&#160;现&#160;&#160;金&#160;额&#160;:&#160;</string>
+    <string name="tv_tab_password_account">会员账号密码&#160;:&#160;</string>
+    <string name="btn_rmb_apply_tj">提交申请</string>
+    <string name="tv_tab_tixian">说明&#160;:&#160;\n
+1.申请取现后24小时内人工处理（周末、节假日除外）。\n
+2.因为支付宝充值支付需要费用。取现200元以下收2元服务费，200元以上收取1%的服务费。
+</string>
+    
+    <string name="err_alipay_account_is_null">支付宝账号不能为空！</string>
+    <string name="err_tixian_price_is_null">提现金额不能为空！</string>
+    <string name="err_tixian_price_is_en">提现金额不能超过余额！</string>
+    <string name="err_password_account_is_null">会员账号密码不能为空！</string>
+    
+    <string name="err_password_account_not_right">会员账号密码不正确！</string>
+    <string name="err_tixian_apply_is_exsit">今天已经申请提现！</string>
+    <string name="err_tixian_pwd_change">修改密码15天内不能提取！</string>
+    
+    <string name="tv_tab_chongzhi_title">账户充值</string>
+    <string name="tv_tab_chongzhi_price">充值金额&#160;:&#160;</string>
+    <string name="btn_tab_chongzhi">使用支付宝充值</string>
+    <string name="tv_tab_chongzhi">充值以后，支付更方便！</string>
+    
+    
+    <string name="toast_sp_name_is_null">请输入服务名称！</string>
+    <string name="toast_sp_pinche_price_is_null">请输入拼车价格！</string>
+    <string name="toast_sp_daihuo_price_is_null">请输入带货价格！</string>
+    <string name="toast_sp_daijia_price_is_null">请输入代驾价格！</string>
+   
+    <string name="toast_sp_time_not_right">服务时间设置不对！</string>
+    <string name="err_sp_qunhao_not_exist">关联群号不存在！</string>
+    <string name="err_sp_name_exist">服务名称已经被使用！</string>
+    
+    <string name="tv_sp_added">上架服务</string>
+    <string name="tv_sp_unadded">下架服务</string>
+    <string name="tv_sp_vip_apply">申请VIP</string>
+    <string name="tv_sp_tounadded">下架</string>
+    <string name="tv_sp_toadded">上架</string>
+    
+    <string name="tv_pinche_time">拼车时间&#160;:</string>
+    <string name="tv_pinche_man_count">拼车人数&#160;:</string>
+    <string name="tv_pinche_one_p">1人</string>
+    <string name="tv_pinche_two_p">2人</string>
+    <string name="tv_pinche_three_p">3人</string>
+    <string name="tv_pinche_four_p">4人</string>
+     <string name="tv_pinche_baoche">专车</string>
+     <string name="tv_pinche_unit">人&#160;</string>
+    <string name="tv_pinche_f_t_p">5至10人</string>
+    <string name="tv_pinche_tmore_p">10人以上</string>
+     
+    <string name="tv_pinche_one_p_bc">1人包车</string>
+    <string name="tv_pinche_two_p_bc">2人包车</string>
+    <string name="tv_pinche_three_p_bc">3人包车</string>
+    <string name="tv_pinche_four_p_bc">4人包车</string>
+    <string name="tv_pinche_f_t_p_bc">5至10人包车</string>
+    <string name="tv_pinche_tmore_p_bc">10人以上包车</string>
+     
+     <string name="tv_pinche_bc">专车</string>
+    
+    <string name="tv_daihuo_one_kg">0-5千克</string>
+    <string name="tv_daihuo_two_kg">5-10千克</string>
+    <string name="tv_daihuo_three_kg">10-25千克</string>
+    <string name="tv_daihuo_four_kg">25-50千克</string>
+    <string name="tv_daihuo_five_kg">50-100千克</string>
+    <string name="tv_daihuo_six_kg">100千克以上</string>
+    
+    
+     <string name="tv_pinche_tos">《拼车协议》</string>
+     <string name="tv_pinche_tos2">拼车协议</string>
+     <string name="tv_daihuo_tos">《快递协议》</string>
+     <string name="tv_daihuo_tos2">快递协议</string>
+     <string name="tv_daijia_tos">《代驾协议》</string>
+     <string name="tv_daijia_tos2">代驾协议</string>
+     
+      <string name="tv_service_tab">我的服务</string>
+     <string name="tv_vip_tos">《VIP服务协议》</string>
+     <string name="tv_vip_tos2">VIP服务协议</string>
+     
+     <string name="btn_publish">发布</string>
+     <string name="btn_save">保存</string> 
+     
+      <string name="tv_notice_op">注意选项&#160;:</string>
+      
+      <string name="tv_ntop_one">带小孩</string>
+      <string name="tv_ntop_two">带货物多</string>
+      <string name="tv_ntop_three">老人病人</string>
+     
+      <string name="tv_dhntop_one">鲜活易碎</string>
+      <string name="tv_dhntop_two">耗时代办</string>
+      <string name="tv_dhntop_three">特大特长</string>
+      
+      
+    <string name="tv_daihuo_time">取件时间&#160;:</string>
+    <string name="tv_daihuo_goodsname">货物名称&#160;:</string>
+    <string name="tv_daihuo_goodsweight">货物重量&#160;:</string>
+    <string name="tv_daihuo_goodscount">货物件数&#160;:</string>
+    <string name="tv_daihuo_goodsprice">货物价值&#160;:</string>
+    <string name="tv_daihuo_goodsweight_kg">千克</string>
+    <string name="tv_daihuo_goodscount_jian">件</string>
+    <string name="tv_daihuo_goodsprice_2">货物价值</string>
+    
+    <string name="tv_daihuo_rec_name">收件人姓名&#160;:</string>
+    <string name="tv_daihuo_rec_tel">收件人电话&#160;:</string>
+     <string name="tv_daijia_time">代驾时间&#160;:</string>
+     
+     <string name="tv_daddress_search">地址查询</string>
+     <string name="tv_daddress_set">地址设置</string>
+      <string name="pdialog_location_ing">定位中&#8230;</string>  
+     
+      <string name="tv_day_1">今日</string>
+      <string name="tv_day_2">明天</string>
+      <string name="tv_day_3">后天</string>
+      <string name="tv_day_4">大后天</string>
+      <string name="toast_p_count_is_null">拼车人数不能为空！</string>
+      <string name="toast_tos_is_null">必须同意协议！</string>
+      
+      <string name="tv_chetype_op">车的类型&#160;:</string>
+     
+      <string name="tv_chetype_op_one">手动挡</string>
+      <string name="tv_chetype_op_two">自动档</string>
+      
+      
+      <string name="toast_from_address_is_null">出发地址不能为空！</string>
+      <string name="toast_to_address_is_null">目的地址不能为空！</string>
+      <string name="err_xinxi_info">这三天内未选标交易的信息已经有15条了，请删除一些无用的信息！</string> 
+      <string name="err_pinche_time">拼车时间设置不正确！</string>
+      <string name="err_daihuo_time">取件时间设置不正确！</string>
+      <string name="err_daijia_time">代驾时间设置不正确！</string>
+      <string name="err_daijia_time_is_null">代驾时间不能为空！</string>
+      
+      <string name="tv_goodsprice_ask">&#160;&#160;&#160;&#160;&#160;&#160;1、不同的货物价值，执行的收费标准不同。货物价值越高，支付的费用越高。当然，具体的费用价格和服务商商谈而定。
+       \n&#160;&#160;&#160;&#160;&#160;&#160;2、在运送中出现意外，需要理赔时，货物价值将作为赔付的参考并需要货物的价值证明。</string>
+      
+    
+      <string name="toast_daihuo_time_is_null">取件时间不能为空！</string>
+      <string name="toast_from_address_is_null2">取件地址不能为空！</string>
+      <string name="toast_daihuo_rec_name_is_null">收件人姓名不能为空！</string>
+      <string name="toast_daihuo_rec_tel_is_null">收件人电话不能为空！</string>
+      <string name="toast_daihuo_f_t_s">取件地址和目的地址不能一样！</string>
+      
+      <string name="toast_daihuo_goodsname_is_null">货物名称不能为空！</string>
+      <string name="toast_daihuo_goodsweight_is_null">货物重量不能为空！</string>
+      <string name="toast_daihuo_goodscount_is_null">货物件数不能为空！</string>
+      <string name="toast_daihuo_goodsprice_is_null">货物价值不能为空！</string>
+    
+      <string name="tv_d_title">需求信息</string>
+      <string name="tv_receive">我收到</string>
+      <string name="tv_publish">我发布</string>
+      <string name="tv_join">我参与</string>
+      
+      <string name="tv_type_pinche">拼车</string>
+      <string name="tv_type_daihuo">快递</string>
+      <string name="tv_type_daijia">代驾</string>
+      <string name="tv_toubiao">投标</string>
+      <string name="tv_toubiao_tab">$s%d人投标</string>
+      <string name="tv_toubiao_tab2">人投标</string>
+      
+      <string name="tv_p_edit">修改信息</string>
+      <string name="tv_p_cancle">取消信息</string>
+      
+      
+      <string name="tv_toubiao_qr">您确定要投标吗？</string>
+      <string name="tv_do_price_title">投标报价</string>
+    <string name="tv_do_price">报价&#160;:</string>
+    <string name="err_do_price_is_null">报价不能为空！</string>
+    <string name="err_do_price_is_zero">报价不能为零！</string>
+      
+    <string name="err_do_yz_is_null">验证信息不能为空！</string>
+    <string name="tv_d_title_des">信息详情</string>
+    
+    <string name="tv_toubiao_ing">投标中</string>
+    <string name="tv_toubiao_editting">修改中</string>
+    <string name="tv_toubiao_select">已选标</string>
+    <string name="tv_toubiao_cancle">取消重选</string>
+    <string name="tv_toubiao_jy_comp">交易完成</string>
+    <string name="tv_toubiao_d_cancle">需求取消</string>
+    <string name="tv_toubiao_t_cancle">取消投标</string>
+    
+    <string name="tv_cancel_tab">取消投标的理由&#160;:</string>
+    <string name="tv_cancel_tab_is_null">取消投标的理由不能为空！</string>
+    <string name="tv_cancel_title">取消理由输入</string>
+    
+    
+    <string name="tv_del_notice_title">清理数据</string>
+    <string name="tv_del_notice_c">确定要全部删除消息记录？</string>
+    
+    <string name="err_toubiao_ing">信息修改中，无法投标！</string>
+    
+    <string name="tv_toubiao_shop_view">查看投标商家</string>
+    <string name="tv_toubiao_zb_tab">中标商家及报价&#160;:</string>
+    
+    <string name="btn_comp_ed">修改</string>
+    <string name="btn_cancel_pul">信息取消</string>
+    
+    <string name="btn_jy_comp">交易完成</string>
+    <string name="tv_cancel_tab2">取消信息的理由&#160;:</string>
+    <string name="tv_cancel_tab2_is_null">取消信息的理由不能为空！</string>
+    <string name="err_cancel_demand">信息无法取消！</string>
+    
+    <string name="tv_pinche_edit">拼车信息修改</string>
+    <string name="tv_daijia_edit">代驾信息修改</string>
+    <string name="tv_daihuo_edit">带货信息修改</string>
+    
+    <string name="tv_tender_list_title">投标商家</string>
+    <string name="tv_tender_selected">选标</string>
+    <string name="tv_toubiao_select_qr_t">选标确认</string>
+    <string name="tv_toubiao_select_qr_c">确定要选择该商家(%d$s)？</string>
+    <string name="tv_toubiao_select_qr_c2">确定要选择该商家？</string>
+    
+    <string name="tv_cancel_tender_title">取消已选商家</string>
+    <string name="tv_cancel_tab3">取消已选商家的理由&#160;:</string>
+    <string name="tv_cancel_tab3_is_null">取消的理由不能为空！</string>
+    
+    
+     <string name="tv_contact_by_tel">电话联系</string>
+     <string name="tv_m_evaluation">客户评价</string>
+     <string name="tv_m_products">商家服务</string>
+     
+     <string name="err_add_evaluation">已经评价，请不要重复评价！</string>
+    
+     <string name="tv_m_s_des">商家信息</string>
+     <string name="tv_m_p_des">需求发布者信息</string>
+    <string name="tv_tender_selected_talk">只能和中标的会员聊天！</string>
+    <string name="tv_tender_selected_tel">只能和中标的会员电话联系！</string>
+    
+    <string name="tv_type_all_s">全部</string>
+    
+     <string name="tv_p_near">最近</string>
+     <string name="tv_p_price">最便宜</string>
+     <string name="tv_p_pm">信誉最高</string>
+   
+    <string name="tv_type_pinche_s">拼车</string>
+    <string name="tv_type_daihuo_s">带货</string>
+    <string name="tv_type_daijia_s">代驾</string>
+    
+    <string name="btn_send">发送</string>
+    <string name="tv_send_content_is_null">发送内容不能为空！</string>
+    <string name="tip_vip_apply_qr">确定要申请成Vip服务？</string> 
+    
+    <string name="tip_no_sdcard">没有内存卡！</string>
+    <string name="tip_no_net">没有网络！</string>
+     <string name="tip_btn_yes">确定</string> 
+     <string name="tip_btn_cancel">取消</string> 
+     <string name="err_token_space">token 为空！</string>
+     <string name="err_token_notexist">登录超时！</string>
+     <string name="err_token_notright">账户在异地登录！</string>
+     <string name="err_server_db">亲，服务器数据库开小差了哦,请重试！</string>
+      <string name="err_login_info">手机号或密码不正确！</string>
+     
+     <string name="tv_chat_lt">消息</string> 
+     <string name="tv_chat_pyq">朋友圈</string> 
+     <string name="tv_chat_txl">通讯录</string> 
+      
+     <string name="btn_chat_pus">发布</string> 
+     <string name="tv_search_friend">搜索好友</string> 
+     <string name="hint_mobile_nick">输入好友的手机号/昵称</string> 
+     <string name="err_search_content_is_null">搜索内容不能为空！</string> 
+     <string name="btn_add_to_abook">添加到通讯录</string> 
+     
+     <string name="tv_m_qun">群</string>
+     <string name="tv_m_qun_add">建群</string>
+     <string name="tv_m_qun_zhu">群主</string>
+     <string name="tv_m_qun_chenyun">成员</string> 
+     <string name="tv_m_qun_name">群名称&#160;:</string>
+      <string name="tv_m_qun_add_title">建群</string>
+     <string name="err_m_qun_name_is_null">群名称不能为空！</string>
+     <string name="err_m_qun_count">建的群的个数已经到限制数量，无法再建！</string>
+     <string name="err_m_qun_name_is_exist">群名称已经使用！</string>
+     
+      <string name="tv_m_qun_dg">操作</string>
+      <string name="tv_m_qun_dg_del">删除群</string>
+      <string name="tv_m_qun_dg_cancel">取消</string>
+      <string name="tv_m_qun_count_tab">名群成员</string>
+      <string name="tv_m_qun_count_add">添加</string>
+     <string name="tv_m_qun_dg_exit">退出该群</string> 
+     <string name="tv_m_qun_dg_texit">踢出该群</string> 
+     
+     <string name="btn_add_to_abook_2">添加到群里</string> 
+     <string name="tv_m_shops">商家</string> 
+     <string name="tv_m_s_product">商品</string> 
+     <string name="tv_all_s">全部</string>
+    <string name="tv_sp_name_s">服务名称</string>
+    <string name="tv_so_address_s">出发目的</string>
+    
+     <string name="tv_m_name_s">商家名称</string>
+     <string name="tv_m_mobile_s">手机号</string>
+    <string name="hint_input_content">输入关键词</string>
+    <string name="hint_input_content2">输入服务关键词</string>
+     
+    <string name="err_input_content_is_null">输入关键词！</string> 
+    <string name="tv_shop_product">商家服务列表</string>
+    
+     <string name="tv_sp_title_pc_info">拼车服务信息</string>
+     <string name="tv_sp_title_dh_info">带货服务信息</string>
+     <string name="tv_sp_title_dj_info">代驾服务信息</string>
+    
+      <string name="tv_chongzhi_price_is_null">充值金额不能为空！</string>
+      <string name="tv_chongzhi_price_out_1000">充值金额不能超过1000元！</string>
+    
+     <string name="tv_receive_range_0">500米</string>
+     <string name="tv_receive_range_1">1,000米</string> 
+     <string name="tv_receive_range_2">2,000米</string> 
+     <string name="tv_receive_range_3">5,000米</string> 
+     <string name="tv_receive_range_4">10,000米</string>  
+     
+     <string name="tv_shuoming">补充说明&#160;:</string>  
+     
+    <string name="hint_feedback">请输入反馈信息内容</string>   
+    <string name="hint_shuoming">说明内容</string>  
+      <string name="btn_submint">提交</string>  
+       <string name="tv_feedback">意见反馈</string> 
+    <string name="tv_feedback_is_null">意见反馈不能为空！</string>  
+    <string name="err_feedback_is_exist">反馈信息今日已经提交,不能重复提交！</string>   
+    
+    <string name="tv_share_title">分享</string>
+    <string name="tv_share_weibo">新浪微博</string>
+    <string name="tv_share_tencel">腾讯微博</string>
+    <string name="tv_share_weixin">微信</string>
+    <string name="tv_share_text">亲，我正在使用路路帮，可以拼车、快递、代驾等。很强大的APP，赶紧加入(<a href="http://m.lulubang.cn/">http://m.lulubang.cn</a>)吧！</string>
+    
+    
+    <string name="dg_share_title">分享方式</string>
+    <string name="dg_share_weixin">分享到微信</string>
+    <string name="dg_share_other">分享到其他</string>
+    
+    
+    <string name="errcode_success">发送成功</string>
+	<string name="errcode_cancel">发送取消</string>
+	<string name="errcode_deny">发送被拒绝</string>
+	<string name="errcode_unknown">发送返回</string>
+    
+	
+	<string name="pdialog_vsion_check">版本检验中&#8230;</string> 
+    <string name="app_dg_vsion_title">版本更新(当前版本：%1$s)</string> 
+   <string name="app_dg_vsion_updata_question">发现新版本(%1$s),是否更新？</string>
+   <string name="app_dg_vsion_do_now">立即更新</string> 
+   <string name="app_dg_vsion_do_next">下次再说</string>
+   <string name="pdialog_vsion_updata">版本更新中&#8230;</string> 
+	<string name="err_vsion_new">已是最新版本！</string>  
+	
+	<string name="hint_publish_cfriends">请输入信息内容</string>
+	<string name="tv_publish_cfriends">发布朋友圈信息</string>
+	<string name="tv_map_view">图片查看</string>
+	
+	<string name="tv_m_map_dg">操作</string>
+    <string name="tv_m_map_dg_del">删除图片</string>
+    <string name="tv_m_map_dg_cancel">取消</string>
+	 <string name="tv_publish_cfriends_is_null">信息不能为空！</string> 
+	 <string name="err_publish_cfriends_is_count_out">发布朋友圈信息当日数量已经超过15条,当日不能再发布！</string>    
+	
+	 <string name="tv_dc_pinjia">交易完成服务评价</string>
+	 <string name="tv_dc_pinjia_tab">服务评价&#160;:</string>
+	 <string name="hint_dc_pinjia_tab">请填写具体的评价内容</string>
+	<string name="err_dc_pinjia_content_is_null">评价内容不能为空！</string>
+	<string name="tv_dc_pinjia2">评价投诉</string>
+	 
+	<string name="err_dc_pinjia_time">未到交易时间不能完成服务！</string>
+	
+	
+    <string name="err_net_link">网络异常！</string>
+    <string name="err_no_data">没有数据！</string>
+    <string name="err_not_netlink">网络连接不可用！</string>
+    <string name="pdialog_data_load">数据加载中&#8230;</string> 
+    
+    <string name="remote_call_failed">Failure calling remote service</string>
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装移动快捷支付，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+    <string name="donate_subject">"交易价钱"</string>
+    <string name="donate_body">"交易内容"</string>
+    
+    <string name="title_activity_taobao">"淘宝"</string>
+</resources>

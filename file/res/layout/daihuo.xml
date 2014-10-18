@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <!-- head -->
+    <include layout="@layout/com_header" />
+    <!-- body -->
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent" 
+		android:layout_below="@+id/ll_head" android:fillViewport="true" android:measureAllChildren="false"
+		android:scrollbars="none" android:background="@color/o_grey" >
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		    <!-- 出发地 和 目的地 -->
+		    <RelativeLayout android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:id="@+id/ll_from_ad" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_p_address" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/tab_select_color" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_star" />
+                  <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_mhao" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_333" android:id="@+id/tv_from_area" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="30.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_function" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_from_ad">
+                <TextView android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip" android:drawableLeft="@drawable/line_address" android:layout_weight="1.0" />
+                <Button android:gravity="center" android:layout_gravity="right" android:id="@+id/btn_trans" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/change_places" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/ll_to_ad"  android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_function" android:layout_centerVertical="true">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_p_address2" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/tab_select_color" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_star" />
+                  <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_mhao" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_333" android:id="@+id/tv_to_area" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="30.0dip" android:singleLine="false" android:layout_weight="1.0" />
+            </LinearLayout>
+           </RelativeLayout>
+		   <!-- 取件时间 --> 
+		   <LinearLayout android:id="@+id/ll_daihuo_time"  android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_p_time"  android:textSize="14sp"/>
+                <TextView android:textSize="14.0sp" android:textColor="@color/tab_select_color" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_star" />
+                  <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_mhao" />
+            </LinearLayout>
+            <TextView  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_time" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" />
+            <ImageView android:id="@+id/iv_time"  android:src="@drawable/icon_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                android:paddingLeft="3dip" android:paddingRight="3dip"/>
+          </LinearLayout> 
+          <!-- 货物名称 重量 件数  声明价值 -->
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_daihuo_goodsname"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_goodsname" android:background="@drawable/edit_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                 android:maxLength="30"/>
+          </LinearLayout> 
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_mid_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_p_goodsweight"  android:textSize="14sp"/>
+                <TextView android:textSize="14.0sp" android:textColor="@color/tab_select_color" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_star" />
+                  <TextView android:textSize="14.0sp" android:textColor="@color/text_999" android:layout_gravity="top|right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_mhao" />
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_goodsweight" android:background="@drawable/edit_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                android:maxLength="8" android:inputType="numberDecimal" android:text="1"/>
+            <TextView android:textColor="@color/text_666" android:textSize="14.0sp" android:gravity="left|center" android:layout_gravity="right|center" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="@string/tv_daihuo_goodsweight_kg"  />
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_goodscount" android:background="@drawable/edit_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                android:maxLength="8" android:inputType="numberDecimal" android:text="1" />
+             <TextView android:textColor="@color/text_666" android:textSize="14.0sp" android:gravity="left|center" android:layout_gravity="right|center" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="@string/tv_daihuo_goodscount_jian"  />
+         
+          </LinearLayout>
+          <!-- <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_mid_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_daihuo_goodscount"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_goodscount" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                android:maxLength="8" android:inputType="numberDecimal" android:text="1" />
+             <TextView android:textColor="@color/text_666" android:textSize="14.0sp" android:gravity="left|center" android:layout_gravity="right|center" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="@string/tv_daihuo_goodscount_jian"  />
+         
+          </LinearLayout> -->
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_mid_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_daihuo_rec_tel"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_rec_tel" android:background="@drawable/edit_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                android:maxLength="13" android:inputType="phone"/>
+          </LinearLayout>
+          
+          <!-- <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+           <LinearLayout android:gravity="center_vertical"  android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_daihuo_goodsprice"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_goodsprice" android:background="@drawable/edit_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                android:maxLength="12" android:inputType="numberDecimal"/>
+            <TextView android:textColor="@color/text_666" android:textSize="14.0sp"  android:id="@+id/tv_daihuo_goodsprice_ask" android:gravity="left|center" android:layout_gravity="right|center" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="@string/tv_rmb"  />
+           </LinearLayout>
+            
+           <TextView android:textColor="@color/tab_select_color" android:textSize="12.0sp" android:gravity="left|center" android:layout_gravity="right|center" android:layout_width="fill_parent"
+                android:layout_height="wrap_content"  android:paddingLeft="15dip" android:text="@string/hint_goods_price"  />
+           
+          </LinearLayout> -->
+          
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_daihuo_goodsprice"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_goodsprice" android:background="@drawable/edit_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                android:maxLength="12" android:inputType="numberDecimal"/>
+             <TextView android:textColor="@color/text_666" android:textSize="14.0sp"  android:id="@+id/tv_daihuo_goodsprice_ask" android:gravity="left|center" android:layout_gravity="right|center" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="@string/tv_rmb" android:drawableRight="@drawable/tag_ask" />
+         
+          </LinearLayout>
+           
+          <!-- 收件人 和 电话
+	       <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_daihuo_rec_name"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_rec_name" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                android:maxLength="20"/>
+          </LinearLayout>
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_daihuo_rec_tel"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_daihuo_rec_tel" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" 
+                android:maxLength="13" android:inputType="phone"/>
+          </LinearLayout> -->
+          <!-- 注意选项 
+	       <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_one_normal" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_notice_op"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:id="@+id/tv_ntop_one"  android:textColor="@color/text_333"  android:text="@string/tv_dhntop_one" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_ntop_two"  android:textColor="@color/text_333"  android:text="@string/tv_dhntop_two" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_ntop_three"  android:textColor="@color/text_333"  android:text="@string/tv_dhntop_three" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+            
+          </LinearLayout> -->
+	       
+	      <!-- 补充说明 
+	      <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_bcsm_content"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_bcsm" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" android:singleLine="false" android:maxLength="100"/>
+          </LinearLayout>
+           <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_bcsm_maps"  android:textSize="14sp"/>
+            </LinearLayout>
+             <ImageView android:id="@+id/iv_map_one"  android:layout_width="45dip" android:layout_height="45dip"
+           android:src="@drawable/bg_add_image"  android:layout_centerVertical="true"  android:layout_weight="1.0"  />
+              <ImageView android:id="@+id/iv_map_two"  android:layout_width="45dip" android:layout_height="45dip"
+            android:src="@drawable/bg_add_image"  android:layout_centerVertical="true" android:layout_weight="1.0"  />
+               <ImageView android:id="@+id/iv_map_three"  android:layout_width="45dip" android:layout_height="45dip"
+           android:src="@drawable/bg_add_image"  android:layout_centerVertical="true"  android:layout_weight="1.0" />
+           
+          </LinearLayout>-->
+	       <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_up_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+             <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dip">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_notice_op"  android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView  android:id="@+id/tv_ntop_one"  android:textColor="@color/text_333"  android:text="@string/tv_dhntop_one" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_ntop_two"  android:textColor="@color/text_333"  android:text="@string/tv_dhntop_two" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+             <TextView  android:id="@+id/tv_ntop_three"  android:textColor="@color/text_333"  android:text="@string/tv_dhntop_three" android:background="@drawable/tv_unselect_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                 android:textSize="13sp"  android:gravity="center" android:layout_weight="1.0" />
+          </LinearLayout>
+          <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_down_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            
+             <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text_999" android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tv_sp_bcsm_content"  android:textSize="14sp"/>
+            </LinearLayout>
+            <EditText  android:textColor="@color/text_333" android:gravity="left" android:id="@+id/tv_bcsm" android:background="@drawable/edit_box" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+                android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:textSize="14sp" android:singleLine="false" android:maxLength="100"/>
+            <ImageView android:id="@+id/iv_map_one"  android:layout_width="40dip" android:layout_height="40dip"
+              android:src="@drawable/bg_addmap"  android:layout_centerVertical="true"    android:paddingLeft="3dip" android:paddingRight="3dip"/>
+          </LinearLayout>
+           
+           <LinearLayout android:orientation="horizontal" android:layout_marginBottom="10.0dip"  android:layout_marginLeft="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" >
+          <CheckBox android:textSize="14.0sp" android:textColor="#ff313131" android:id="@+id/cb_argee" android:background="@null" android:paddingLeft="20.0dip" android:checked="true"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/xml_checkbox" android:text="@string/cb_tab_agree" />
+          <TextView android:textSize="14.0sp" android:textColor="#ffe7822d" android:id="@+id/tv_service" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_daihuo_tos" android:singleLine="true" />
+           </LinearLayout>
+           <Button  android:id="@+id/btn_publish" android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" 
+             android:background="@drawable/bg_btn_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip"
+             android:text="@string/btn_publish"  android:layout_marginBottom="10.0dip"/>
+           
+	      
+        </LinearLayout>        
+    </ScrollView>
+</RelativeLayout>
