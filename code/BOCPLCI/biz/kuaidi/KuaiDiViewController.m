@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 China M-World Co.,Ltd. All rights reserved.
 //
 
-#import "PinCheViewController.h"
+#import "KuaiDiViewController.h"
 #import "MBTextField.h"
 #import "MBLabel.h"
 #import "AddressSetViewController.h"
@@ -17,7 +17,7 @@
 #import "MBAccessoryView.h"
 #import "HttpWorkHelp.h"
 #import "NSDateUtilities.h"
-@interface PinCheViewController ()<UITextFieldDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,MBAccessoryViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface KuaiDiViewController ()<UITextFieldDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,MBAccessoryViewDelegate,UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     BMKLocationService* _locService;
     
@@ -25,7 +25,6 @@
     UIButton*_addToBtn;
     
     
-    NSMutableArray *_addBtnArray;
     NSMutableArray *_addBtnArrayTwo;
     MBTextField *_peopleTF;
     MBTextField *_sayDetailTF;
@@ -63,7 +62,7 @@
 }
 @end
 
-@implementation PinCheViewController
+@implementation KuaiDiViewController
 
 -(void)viewWillAppear:(BOOL)animated {
     
@@ -168,10 +167,9 @@
     [_locService startUserLocationService];
     
     // Do any additional setup after loading the view.
-    _addBtnArray = [[NSMutableArray alloc]initWithCapacity:2];
     _addBtnArrayTwo = [[NSMutableArray alloc]initWithCapacity:2];
     _isZhuanche = NO;
-    self.title = @"拼车";
+    self.title = @"快递";
     [self initWithView];
     
     _HUD = [[MBProgressHUD alloc]initWithView:self.contentView];
@@ -391,7 +389,7 @@
     [_imageViewThree addSubview:_addToBtn];
     
     
-    UIImageView*_imageViewTwo =[[UIImageView alloc]initWithFrame:CGRectMake(10, 90, kScreenWidth-20, 112)];
+    UIImageView*_imageViewTwo =[[UIImageView alloc]initWithFrame:CGRectMake(10, 90, kScreenWidth-20, 112/2-20)];
     _imageViewTwo.layer.borderWidth  = 0.5f;
     _imageViewTwo.layer.cornerRadius  = 7.0f;
     _imageViewTwo.backgroundColor = [UIColor whiteColor];
@@ -404,7 +402,7 @@
     UILabel*_itemNamelTwo22  =[[UILabel alloc]initWithFrame:CGRectMake(10, 5, 60, 30)];
     _itemNamelTwo22.backgroundColor =[UIColor clearColor];
     _itemNamelTwo22.font =kNormalTextFont;
-    _itemNamelTwo22.text = @"拼车时间: ";
+    _itemNamelTwo22.text = @"取件时间: ";
     _itemNamelTwo22.textColor = [UIColor grayColor];
     [_imageViewTwo addSubview:_itemNamelTwo22];
     
@@ -426,116 +424,8 @@
     _curTimeStr =[[NSDate date]dateTimeString];
     _timeLabel.text = [NSString stringWithFormat:@"今天%@",[[NSDate date]timeString]];
     
-    UIImageView *sepeImageTho2 =[[UIImageView alloc]initWithFrame:CGRectMake(0, 36, kScreenWidth-20, 1)];
-    sepeImageTho2.backgroundColor = [UIColor grayColor];
-    [_imageViewTwo addSubview:sepeImageTho2];
-    sepeImageTho2.alpha=0.6;
-    
-    
-    UILabel*_itemNamelTwo222  =[[UILabel alloc]initWithFrame:CGRectMake(10, 55, 60, 30)];
-    _itemNamelTwo222.backgroundColor =[UIColor clearColor];
-    _itemNamelTwo222.font =kNormalTextFont;
-    _itemNamelTwo222.text = @"拼车人数: ";
-    _itemNamelTwo222.textColor = [UIColor grayColor];
-    [_imageViewTwo addSubview:_itemNamelTwo222];
-    _m_count=1;
-    for (int i=0; i<3; i++) {
-        UIView *viewABOUT  =[[UIView alloc]initWithFrame:CGRectMake(70+(kScreenWidth-100)/3*i, 40, (kScreenWidth-100)/3-2, 33)];
-        viewABOUT.backgroundColor = HEX(@"#fffaf0");
-        [_imageViewTwo addSubview:viewABOUT];
         
-        UIButton *loginBtn =[UIButton buttonWithType:UIButtonTypeCustom];
-        loginBtn.frame = CGRectMake(70+(kScreenWidth-100)/3*i, 40, (kScreenWidth-100)/3-2, 33);
-        loginBtn.backgroundColor = [UIColor clearColor];
-        loginBtn.layer.cornerRadius = 3.0f;
-        [loginBtn setTitle:[NSString stringWithFormat:@"%d人",i+1] forState:UIControlStateNormal];
-        loginBtn.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-        loginBtn.layer.borderWidth=0.5;
-        loginBtn.layer.borderColor=[UIColor grayColor].CGColor;
-        [_imageViewTwo addSubview:loginBtn];
-        if(i==0){
-            [loginBtn setBackgroundImage:[UIImage imageNamed:@"tv_select_bg.9.png"] forState:UIControlStateNormal];
-
-        }else{
-            [loginBtn setBackgroundImage:[UIImage imageNamed:@"tv_unselect_bg.9.png"] forState:UIControlStateNormal];
-
-        }
-        [loginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        loginBtn.tag=i+1;
-        [loginBtn addTarget:self action:@selector(getCodeBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
-        [_addBtnArray addObject:loginBtn];
         
-    }
-    
-    for (int i=0; i<3; i++) {
-        UIView *viewABOUT  =[[UIView alloc]initWithFrame:CGRectMake(70+(kScreenWidth-100)/3*i, 75, (kScreenWidth-100)/3-2, 33)];
-        viewABOUT.backgroundColor = HEX(@"#fffaf0");
-        [_imageViewTwo addSubview:viewABOUT];
-        
-        if(i==0){
-            
-            UIButton *loginBtn =[UIButton buttonWithType:UIButtonTypeCustom];
-            loginBtn.frame = CGRectMake(70+(kScreenWidth-100)/3*i, 75, (kScreenWidth-100)/3-2, 33);
-            loginBtn.backgroundColor = [UIColor clearColor];
-            loginBtn.layer.cornerRadius = 3.0f;
-            [loginBtn setTitle:[NSString stringWithFormat:@"%d人",i+1+3] forState:UIControlStateNormal];
-            loginBtn.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-            loginBtn.layer.borderWidth=0.5;
-            loginBtn.layer.borderColor=[UIColor grayColor].CGColor;
-            [_imageViewTwo addSubview:loginBtn];
-            [loginBtn setBackgroundImage:[UIImage imageNamed:@"tv_unselect_bg.9.png"] forState:UIControlStateNormal];
-            [loginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            loginBtn.tag=i+1+3;
-            [loginBtn addTarget:self action:@selector(getCodeBtnPressedTwo:) forControlEvents:UIControlEventTouchUpInside];
-            [_addBtnArray addObject:loginBtn];
-        }
-        if (i==1) {
-            
-            
-            
-            _sepeImageTho2Bg =[[UIImageView alloc]initWithFrame:CGRectMake(70+(kScreenWidth-100)/3*i, 75, (kScreenWidth-100)/3-2, 33)];
-            _sepeImageTho2Bg.backgroundColor = [UIColor clearColor];
-            _sepeImageTho2Bg.image = [UIImage imageNamed:@"tv_unselect_bg.9.png"];
-            [_imageViewTwo addSubview:_sepeImageTho2Bg];
-            
-            _peopleTF = [[MBTextField alloc]initWithFrame:CGRectMake(70+(kScreenWidth-100)/3*i, 75, (kScreenWidth-100)/3-2-20, 33)];
-            _peopleTF.backgroundColor=[UIColor clearColor];
-            _peopleTF.borderStyle=UITextBorderStyleNone;
-            _peopleTF.keyboardType = UIKeyboardTypeNumberPad;
-            [_imageViewTwo addSubview:_peopleTF];
-            _peopleTF.delegate=self;
-            _peopleTF.textAlignment = UITextAlignmentCenter;
-            UILabel *count =[[UILabel alloc]initWithFrame:CGRectMake(70+(kScreenWidth-100)/3*i+(kScreenWidth-100)/3-2-20, 75, 20, 33)];
-            count.text = @"人";
-            [_imageViewTwo addSubview:count];
-            
-            UIImageView *sepeImageTho22 =[[UIImageView alloc]initWithFrame:CGRectMake((kScreenWidth-100)/3*i+70, 105, (kScreenWidth-100)/3-2-20, 1)];
-            sepeImageTho22.backgroundColor = [UIColor grayColor];
-            [_imageViewTwo addSubview:sepeImageTho22];
-            sepeImageTho22.alpha=0.6;
-            
-            
-            
-        }
-        if(i==2){
-            
-            UIButton *loginBtn =[UIButton buttonWithType:UIButtonTypeCustom];
-            loginBtn.frame = CGRectMake(70+(kScreenWidth-100)/3*i, 75, (kScreenWidth-100)/3-2, 33);
-            loginBtn.backgroundColor = [UIColor clearColor];
-            loginBtn.layer.cornerRadius = 3.0f;
-            [loginBtn setTitle:@"专车" forState:UIControlStateNormal];
-            loginBtn.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-            loginBtn.layer.borderWidth=0.5;
-            loginBtn.layer.borderColor=[UIColor grayColor].CGColor;
-            [_imageViewTwo addSubview:loginBtn];
-            [loginBtn setBackgroundImage:[UIImage imageNamed:@"tv_unselect_bg.9.png"] forState:UIControlStateNormal];
-            [loginBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            loginBtn.tag=i+1+3;
-            [loginBtn addTarget:self action:@selector(getCodeBtnPressedZhuChe:) forControlEvents:UIControlEventTouchUpInside];
-        }
-        
-    }
-    
     
     UIImageView*_imageViewTwoLast =[[UIImageView alloc]initWithFrame:CGRectMake(10, 220, kScreenWidth-20, 112)];
     _imageViewTwoLast.layer.borderWidth  = 0.5f;
@@ -805,39 +695,6 @@
         
     }
 }
--(void)getCodeBtnPressed:(UIButton*)btn
-{
-    for (int i=0; i<_addBtnArray.count; i++) {
-        UIButton *show = (UIButton*)_addBtnArray[i];
-        [show setBackgroundImage:[UIImage imageNamed:@"tv_unselect_bg.9.png"] forState:UIControlStateNormal];
-        
-    }
-    [btn setBackgroundImage:[UIImage imageNamed:@"tv_select_bg.9.png"] forState:UIControlStateNormal];
-    _sepeImageTho2Bg.image = [UIImage imageNamed:@"tv_unselect_bg.9.png"];
-    _m_count =btn.tag;
-    
-}
--(void)getCodeBtnPressedTwo:(UIButton*)btn
-{
-    for (int i=0; i<_addBtnArray.count; i++) {
-        UIButton *show = (UIButton*)_addBtnArray[i];
-        [show setBackgroundImage:[UIImage imageNamed:@"tv_unselect_bg.9.png"] forState:UIControlStateNormal];
-        
-    }
-    [btn setBackgroundImage:[UIImage imageNamed:@"tv_select_bg.9.png"] forState:UIControlStateNormal];
-    _sepeImageTho2Bg.image = [UIImage imageNamed:@"tv_unselect_bg.9.png"];
-    _m_count = btn.tag;
-}
--(void)textFieldDidEndEditing:(UITextField *)textField
-{
-    if (textField.text.length>0) {
-        _sepeImageTho2Bg.image = [UIImage imageNamed:@"tv_select_bg.9.png"];
-        for (int i=0; i<_addBtnArray.count; i++) {
-            UIButton *show = (UIButton*)_addBtnArray[i];
-            [show setBackgroundImage:[UIImage imageNamed:@"tv_unselect_bg.9.png"] forState:UIControlStateNormal];
-            
-        }
-        _m_count = 0;
-    }
-}
+
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "PLBaseViewController.h"
+#import "MBProgressHUD.h"
 
 @interface AddressSetViewController : PLBaseViewController
 

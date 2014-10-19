@@ -32,7 +32,7 @@ typedef enum {
 - (void)setShowCloseButtonOnCardView:(BOOL)show;
 - (void)reloadView;// 在需要对视图内容进行改变时调用。  调用顺序：1、重新赋值contentSubviews ; 2、调用reloadView
 - (void)setPresentViewHeight:(CGFloat)height;//设置MBPresentViewTypeSmall视图高度
-
+- (id)initHeightForData:(CGFloat )height withDeleteButton:(BOOL)with;
 @end
 
 @protocol MBPresentViewDelegate <NSObject>

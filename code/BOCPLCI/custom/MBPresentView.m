@@ -71,6 +71,43 @@
     return self;
 }
 
+- (id)initHeightForData:(CGFloat )height withDeleteButton:(BOOL)with
+{
+    if (self = [super init]) {
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(removeSelf)
+                                                     name:MBUserDidLogoutNotification
+                                                   object:nil];
+        
+        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+        self.backgroundColor = MB_RGBA(10, 10, 10, 0.4);
+        _contentView = [[MBContentView alloc] initWithView:self withDeleteButton:with];
+        
+        CGRect rect;
+        if (with) {
+            _viewType = MBPresentViewTypeLarge;
+            height = kScreenHeight - 130;
+            _contentView.image = [[UIImage imageNamed:@"popoverBackground.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:60];
+            _contentHeight = height + MBPresentViewDeleteButtonWH/2;
+            rect = CGRectMake(MBPresentViewMagin, (kScreenHeight - _contentHeight)/2, MBPresentViewContentWidth, _contentHeight);
+            
+        } else {
+            _viewType = MBPresentViewTypeSmall;
+            height = 300;
+            _contentView.image = [UIImage imageNamed:@"smallPopoverBG.png"];
+            rect = CGRectMake(10, (kScreenHeight - height) / 2, kScreenWidth-20, height);
+            _contentView.backgroundColor = [UIColor clearColor];
+            
+        }
+        
+        _contentView.frame = rect;
+        
+        [self addSubview:_contentView];
+    }
+    return self;
+}
+
 - (void)setPresentViewHeight:(CGFloat)height
 {
     CGRect rect = CGRectMake(10, (kScreenHeight - height) / 2, 300, height);

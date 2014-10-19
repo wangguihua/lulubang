@@ -11,13 +11,13 @@
 #endif
 
 #ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-    #import "MBConstant.h"
-    #import "MBGlobalCore.h"
-    #import "MBGlobalUICommon.h"
-    #import "MBCorePreprocessorMacros.h"
+#import "MBConstant.h"
+#import "MBGlobalCore.h"
+#import "MBGlobalUICommon.h"
+#import "MBCorePreprocessorMacros.h"
 #endif
 
 
@@ -25,5 +25,9 @@
 #define ROOTURLSTR @"http://115.29.236.88/"
 #define TOOKNANDCODEINFO  @"TOOKNANDCODE"
 #define HEADIMAGEURLSTR  @"http://115.29.236.88/files/m_logo/"
+#define GETDETAILADDREFROMMAP @"GETDETAILADDREFROMMAP" //地图详情得到的信息
+#define GETDETAILADDREFROMMAPLIST @"GETDETAILADDREFROMMAPLIST" //服务器得到的信息 +定位得到的信息
+#define GETDETAILADDREFROMMAPLISTABOUTBTN @"GETDETAILADDREFROMMAPLISTAboutBtn" //服务器得到的信息 +定位得到的信息 从点击的按钮返回
+
 
 

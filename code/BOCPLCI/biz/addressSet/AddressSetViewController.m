@@ -12,6 +12,9 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "MBTextField.h"
 #import "BMapKit.h"
+#import "HttpWorkHelp.h"
+#import "AddAddressInMapViewController.h"
+
 @interface AddressSetViewController ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 {
     BMKLocationService* _locService;
@@ -21,14 +24,34 @@
     MBSelectView *_shiAbout;
     MBSelectView *_quviceAbout;
     MBTextField *_searchAddTF;
+    NSArray *_addList;
+    MBProgressHUD* _HUD;
+    CLLocationCoordinate2D _toAddre2D;
 }
 @end
 
+
 @implementation AddressSetViewController
+-(void)dealloc{
+
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:GETDETAILADDREFROMMAPLIST object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:GETDETAILADDREFROMMAPLISTABOUTBTN object:nil];
+    
+    
+    
+}
 //完成
 - (void)selectNameOver
 {
+    
+    NSDictionary * resendDic = @{@"addressDetail":_searchAddTF.text,@"latitude":[NSString stringWithFormat:@"%f",_toAddre2D.latitude],@"longitude":[NSString stringWithFormat:@"%f",_toAddre2D.longitude]};
+
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:GETDETAILADDREFROMMAPLIST object:resendDic userInfo:nil];
+
+    
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 -(NSDictionary *)allPlacesInfo
@@ -80,6 +103,7 @@
     
     _locService.delegate = self;
     _geocodesearch.delegate = self;
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -110,6 +134,9 @@
     
     BMKReverseGeoCodeOption *reverseGeocodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];
     reverseGeocodeSearchOption.reverseGeoPoint = pt;
+    
+    _toAddre2D = pt;
+    
     BOOL flag = [_geocodesearch reverseGeoCode:reverseGeocodeSearchOption];
     if(flag)
     {
@@ -132,16 +159,25 @@
         showmeg = [NSString stringWithFormat:@"%@-%@-%@-%@%@",result.addressDetail.province,result.addressDetail.city,result.addressDetail.district,result.addressDetail.streetName,result.addressDetail.streetNumber];
         
         _searchAddTF.text = showmeg;
+    }else
+    {
+        MBAlert(@"获取位置信息出错");
     }
+    [_HUD hide:YES];
+    
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"地址设置";
     _locService = [[BMKLocationService alloc]init];
     _geocodesearch = [[BMKGeoCodeSearch alloc]init];
-
-
+    _HUD = [[MBProgressHUD alloc]initWithView:self.contentView];
+    _HUD.labelText = @"定位中...";
+    [_HUD hide:YES];
+    [self.contentView addSubview:_HUD];
+   
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(selectNameOver)];
 
@@ -233,15 +269,125 @@
     spectImageViewe.backgroundColor = [UIColor orangeColor];
     [self.contentView addSubview:spectImageViewe];
     
+    [self getAddressList];
+    
 }
 
+//获取常用地址列表接口
+- (void)getAddressList
+{
+    
+
+    NSDictionary *userInfo  = [[NSUserDefaults standardUserDefaults]valueForKey:TOOKNANDCODEINFO];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@?c=app&a=getAddressList&token=%@&m_code=%@",ROOTURLSTR,MBNonEmptyStringNo_(userInfo[@"m_token"]),MBNonEmptyStringNo_(userInfo[@"m_code"])];
+
+    NSString* encodedString = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@",encodedString);
+    
+    [[HttpWorkHelp ShareData]httpGet:^(NSDictionary *dic) {
+        
+        if ([MBNonEmptyStringNo_(dic[@"state"])isEqualToString:@"0"]) {
+            _addList = dic[@"list"];
+            int hangIndex = _addList.count/3;
+            
+            
+            for (int i=0; i<hangIndex; i++) {
+                for (int j=0; j<3; j++) {
+                    
+                    UIButton*_showAddreBtn =[UIButton buttonWithType:UIButtonTypeCustom];
+                    _showAddreBtn.frame = CGRectMake(kScreenWidth/3*j, 55*i+95, kScreenWidth/3-20, 30);
+                    _showAddreBtn.backgroundColor = [UIColor whiteColor];
+                    _showAddreBtn.layer.cornerRadius = 3.0f;
+                    [_showAddreBtn setTitle:_addList[i*3+j][@"ua_name"] forState:UIControlStateNormal];
+                    _showAddreBtn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+                    _showAddreBtn.layer.borderWidth=0.5;
+                    _showAddreBtn.tag =i*3+j;
+                    _showAddreBtn.layer.borderColor=[UIColor grayColor].CGColor;
+                    [self.contentView addSubview:_showAddreBtn];
+                    [_showAddreBtn addTarget:self action:@selector(addRessBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
+                    [self.contentView addSubview:_showAddreBtn];
+                    
+                }
+
+            }
+            if(_addList.count<3){
+            
+                for (int i=0; i<_addList.count; i++) {
+                    
+                    UIButton*_showAddreBtn =[UIButton buttonWithType:UIButtonTypeCustom];
+                    _showAddreBtn.frame = CGRectMake(kScreenWidth/3*i, hangIndex*40+95, kScreenWidth/3-20, 30);
+                    _showAddreBtn.backgroundColor = [UIColor whiteColor];
+                    _showAddreBtn.layer.cornerRadius = 3.0f;
+                    [_showAddreBtn setTitle:_addList[i][@"ua_name"] forState:UIControlStateNormal];
+                    _showAddreBtn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+                    _showAddreBtn.layer.borderWidth=0.5;
+                    [_showAddreBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                    _showAddreBtn.layer.borderColor=[UIColor grayColor].CGColor;
+                    [self.contentView addSubview:_showAddreBtn];
+                    [_showAddreBtn addTarget:self action:@selector(addRessBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
+                    _showAddreBtn.tag= i;
+                    [self.contentView addSubview:_showAddreBtn];
+                }
+            }
+        }
+        if ([MBNonEmptyStringNo_(dic[@"err-code"])isEqualToString:@"x002"]) {
+//            MBAlert(@"密码不能为空");
+        }
+        
+    } andUrlName:encodedString andHTTPType:@"GET" withDic:nil andFailCallBack:^(NSDictionary *dic) {
+        MBAlert(@"服务器繁忙，请稍后再试试");
+    }];
+    
+    
+}
+//地址选择
+-(void)addRessBtnPressed:(UIButton*)btn
+{
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:GETDETAILADDREFROMMAPLISTABOUTBTN object:_addList[btn.tag] userInfo:nil];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
 //地图查找
 -(void)_showAddreBtnPressed{
+ 
+    [_HUD show:YES];
     
+    BMKGeoCodeSearchOption *geocodeSearchOption = [[BMKGeoCodeSearchOption alloc]init];
+    geocodeSearchOption.city= _shiAbout.value;
+    geocodeSearchOption.address = _searchAddTF.text;
+    BOOL flag = [_geocodesearch geoCode:geocodeSearchOption];
+    if(flag)
+    {
+        NSLog(@"geo检索发送成功");
+    }
+    else
+    {
+        NSLog(@"geo检索发送失败");
+    }
+}
+
+- (void)onGetGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error
+{
+   
+    if (error == 0) {
+        AddAddressInMapViewController *addre = [[AddAddressInMapViewController alloc]init];
+        addre.location = result.location;
+        addre.address= result.address;
+        [self.navigationController pushViewController:addre animated:YES];
+
+    }else
+    {
+        MBAlert(@"未找到相对应的信息");
+    }
+    [_HUD hide:YES];
 }
 //定位
 -(void)locationBtnPressed{
 
+    [_HUD show:YES];
     [_locService startUserLocationService];
 
 }
@@ -355,19 +501,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

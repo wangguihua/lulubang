@@ -11,6 +11,8 @@
 		1887196819E8C60500580A1F /* PinCheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887196719E8C60500580A1F /* PinCheViewController.m */; };
 		188A7ACD19EA1FCC008CBE33 /* HttpWorkHelp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 188A7ACC19EA1FCC008CBE33 /* HttpWorkHelp.mm */; };
 		188A7AD119EAA9A6008CBE33 /* AddressSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188A7AD019EAA9A6008CBE33 /* AddressSetViewController.m */; };
+		189712BA19F3CBF1003E3B68 /* AddAddressInMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189712B919F3CBF1003E3B68 /* AddAddressInMapViewController.m */; };
+		189712BE19F4031B003E3B68 /* KuaiDiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189712BD19F4031B003E3B68 /* KuaiDiViewController.m */; };
 		18AB21BE19F207F700B60FD1 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18AB21BD19F207F700B60FD1 /* mapapi.bundle */; };
 		18AB21C019F2080400B60FD1 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AB21BF19F2080400B60FD1 /* libbaidumapapi.a */; };
 		18AB21C219F2093500B60FD1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AB21C119F2093500B60FD1 /* CoreLocation.framework */; };
@@ -453,6 +455,10 @@
 		188A7ACC19EA1FCC008CBE33 /* HttpWorkHelp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HttpWorkHelp.mm; sourceTree = "<group>"; };
 		188A7ACF19EAA9A6008CBE33 /* AddressSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressSetViewController.h; sourceTree = "<group>"; };
 		188A7AD019EAA9A6008CBE33 /* AddressSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressSetViewController.m; sourceTree = "<group>"; };
+		189712B819F3CBF1003E3B68 /* AddAddressInMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressInMapViewController.h; sourceTree = "<group>"; };
+		189712B919F3CBF1003E3B68 /* AddAddressInMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressInMapViewController.m; sourceTree = "<group>"; };
+		189712BC19F4031B003E3B68 /* KuaiDiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuaiDiViewController.h; sourceTree = "<group>"; };
+		189712BD19F4031B003E3B68 /* KuaiDiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuaiDiViewController.m; sourceTree = "<group>"; };
 		18AB218019F207F700B60FD1 /* BMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapKit.h; sourceTree = "<group>"; };
 		18AB218119F207F700B60FD1 /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKActionPaopaoView.h; sourceTree = "<group>"; };
 		18AB218219F207F700B60FD1 /* BMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotation.h; sourceTree = "<group>"; };
@@ -1155,10 +1161,21 @@
 		188A7ACE19EAA995008CBE33 /* addressSet */ = {
 			isa = PBXGroup;
 			children = (
+				189712B819F3CBF1003E3B68 /* AddAddressInMapViewController.h */,
+				189712B919F3CBF1003E3B68 /* AddAddressInMapViewController.m */,
 				188A7ACF19EAA9A6008CBE33 /* AddressSetViewController.h */,
 				188A7AD019EAA9A6008CBE33 /* AddressSetViewController.m */,
 			);
 			path = addressSet;
+			sourceTree = "<group>";
+		};
+		189712BB19F4031B003E3B68 /* kuaidi */ = {
+			isa = PBXGroup;
+			children = (
+				189712BC19F4031B003E3B68 /* KuaiDiViewController.h */,
+				189712BD19F4031B003E3B68 /* KuaiDiViewController.m */,
+			);
+			path = kuaidi;
 			sourceTree = "<group>";
 		};
 		18AB217F19F207F700B60FD1 /* inc */ = {
@@ -1558,6 +1575,7 @@
 		BD394E0F19D0612300148AD5 /* biz */ = {
 			isa = PBXGroup;
 			children = (
+				189712BB19F4031B003E3B68 /* kuaidi */,
 				188A7ACE19EAA995008CBE33 /* addressSet */,
 				1887196519E8C5F000580A1F /* pinche */,
 				BD394FDF19D5A15500148AD5 /* myservice */,
@@ -2779,6 +2797,7 @@
 				E74A6743182CDC8800488E35 /* UIImageView+WebCache.m in Sources */,
 				BD22D51D198930F700EC8951 /* UIViewAdditions.m in Sources */,
 				BD394FEB19D5B8FD00148AD5 /* MyServicePinCheTableViewCell.m in Sources */,
+				189712BE19F4031B003E3B68 /* KuaiDiViewController.m in Sources */,
 				E7C281AE1829E83300AC76BC /* qrencode.c in Sources */,
 				BD394E3619D0612300148AD5 /* UserReginFourViewController.m in Sources */,
 				E74A671D182CDB8B00488E35 /* MWPhotoBrowser.m in Sources */,
@@ -2797,6 +2816,7 @@
 				BD394E7619D306EA00148AD5 /* ModifNameViewController.m in Sources */,
 				E7EF9EA51827A74100F057E5 /* MBGlobalUICommon.m in Sources */,
 				E7EF9DEC18274A9300F057E5 /* AFJSONUtilities.m in Sources */,
+				189712BA19F3CBF1003E3B68 /* AddAddressInMapViewController.m in Sources */,
 				E7EF9F011827B40400F057E5 /* UIScreenAdditions.m in Sources */,
 				BD394E3C19D0612300148AD5 /* RepadOneViewController.m in Sources */,
 				188A7ACD19EA1FCC008CBE33 /* HttpWorkHelp.mm in Sources */,
@@ -2949,8 +2969,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: shuirong zhang (N2P2442A64)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuirong zhang (N2P2442A64)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang guihua (22PJEU94U5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang guihua (22PJEU94U5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BOCPLCI/BOCPLCI-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2968,7 +2988,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f5fe4d20-a6dc-4695-8983-3a0dd8d1ebcd";
+				PROVISIONING_PROFILE = "3EADAACE-1AAD-4980-97B2-D366A78D7B18";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = " armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -2998,7 +3018,7 @@
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f5fe4d20-a6dc-4695-8983-3a0dd8d1ebcd";
+				PROVISIONING_PROFILE = "3EADAACE-1AAD-4980-97B2-D366A78D7B18";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = " armv7 armv7s";
 				WRAPPER_EXTENSION = app;

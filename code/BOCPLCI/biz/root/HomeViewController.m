@@ -16,6 +16,7 @@
 #import "MBLoadingView.h"
 #import "MBAlertView.h"
 #import "PinCheViewController.h"
+#import "KuaiDiViewController.h"
 @interface HomeViewController ()<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     UIButton *_fabuBtn;
@@ -121,9 +122,13 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section==0) {
+    if (indexPath.row==0) {
         PinCheViewController *pinChe  = [[PinCheViewController alloc]init];
         [self.navigationController pushViewController:pinChe animated:YES];
+    }
+    if (indexPath.row==1) {
+        KuaiDiViewController *kuaide  = [[KuaiDiViewController alloc]init];
+        [self.navigationController pushViewController:kuaide animated:YES];
     }
 }
 -(void)initWithAllItemsValue{
