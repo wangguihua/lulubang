@@ -13,6 +13,9 @@
 #import "ApplyToOneViewController.h"
 #import "MyServiceViewController.h"
 #import "HttpWorkHelp.h"
+#import "UserSystemSetViewController.h"
+
+
 @interface UserInfoViewController ()<UITableViewDataSource,UITableViewDelegate,UserInfoTableViewCellDelegate>
 
 @end
@@ -193,6 +196,37 @@
 {
     return 1;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==0) {
+       
+    }
+    if (indexPath.section==1) {
+        
+    }
+    
+    if (indexPath.section==2) {
+       
+    }
+    
+    if (indexPath.section==3) {
+        
+    }
+    if (indexPath.section==4) {
+        
+    }
+    if (indexPath.section==5) {
+       
+    }
+    if (indexPath.section==6) {
+        UserSystemSetViewController *systemSetViewController = [[UserSystemSetViewController alloc] init];
+        [self.navigationController pushViewController:systemSetViewController animated:YES];
+        
+    }
+}
+
+
 -(void)initWithAllItemsValue{
     
     UITableView *tableView  =[[UITableView alloc]initWithFrame:CGRectMake(0, 100, kScreenWidth, kContentViewHeight-100+30) style:UITableViewStyleGrouped];

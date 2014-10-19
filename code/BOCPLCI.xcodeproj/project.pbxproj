@@ -304,6 +304,11 @@
 		BDCC70211998F97000CCB59D /* more_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDCC70141998F97000CCB59D /* more_icon@2x.png */; };
 		BDCC70221998F97000CCB59D /* nav_bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = BDCC70151998F97000CCB59D /* nav_bg_image.png */; };
 		BDCC70231998F97000CCB59D /* nav_bg_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDCC70161998F97000CCB59D /* nav_bg_image@2x.png */; };
+		C3B8FE9B19F3841D002A4E58 /* ZSYPopoverListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B8FE9A19F3841D002A4E58 /* ZSYPopoverListView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C3B8FE9E19F3A8ED002A4E58 /* UserFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B8FE9D19F3A8ED002A4E58 /* UserFeedbackViewController.m */; };
+		C3B8FEA119F3A9D4002A4E58 /* MBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B8FEA019F3A9D4002A4E58 /* MBTextView.m */; };
+		C3EFA08F19F3606A00F0D29E /* UserSystemSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EFA08E19F3606A00F0D29E /* UserSystemSetViewController.m */; };
+		C3EFA09219F3632300F0D29E /* UserSystemSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EFA09119F3632300F0D29E /* UserSystemSetCell.m */; };
 		E7234086182A19A200FBBCB8 /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7234085182A19A200FBBCB8 /* CMPopTipView.m */; };
 		E723408A182A256B00FBBCB8 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7234089182A256B00FBBCB8 /* PCLineChartView.m */; };
 		E723408F182A2A7F00FBBCB8 /* MBActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E723408C182A2A7F00FBBCB8 /* MBActionSheet.m */; };
@@ -864,6 +869,16 @@
 		BDCC70151998F97000CCB59D /* nav_bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg_image.png; sourceTree = "<group>"; };
 		BDCC70161998F97000CCB59D /* nav_bg_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bg_image@2x.png"; sourceTree = "<group>"; };
 		BDCC70241998F97E00CCB59D /* ISIOS7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISIOS7.h; sourceTree = "<group>"; };
+		C3B8FE9919F3841D002A4E58 /* ZSYPopoverListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSYPopoverListView.h; sourceTree = "<group>"; };
+		C3B8FE9A19F3841D002A4E58 /* ZSYPopoverListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSYPopoverListView.m; sourceTree = "<group>"; };
+		C3B8FE9C19F3A8ED002A4E58 /* UserFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedbackViewController.h; sourceTree = "<group>"; };
+		C3B8FE9D19F3A8ED002A4E58 /* UserFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedbackViewController.m; sourceTree = "<group>"; };
+		C3B8FE9F19F3A9D4002A4E58 /* MBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTextView.h; sourceTree = "<group>"; };
+		C3B8FEA019F3A9D4002A4E58 /* MBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTextView.m; sourceTree = "<group>"; };
+		C3EFA08D19F3606A00F0D29E /* UserSystemSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSystemSetViewController.h; sourceTree = "<group>"; };
+		C3EFA08E19F3606A00F0D29E /* UserSystemSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSystemSetViewController.m; sourceTree = "<group>"; };
+		C3EFA09019F3632300F0D29E /* UserSystemSetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSystemSetCell.h; sourceTree = "<group>"; };
+		C3EFA09119F3632300F0D29E /* UserSystemSetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSystemSetCell.m; sourceTree = "<group>"; };
 		E7234084182A19A200FBBCB8 /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
 		E7234085182A19A200FBBCB8 /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
 		E7234088182A256B00FBBCB8 /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
@@ -1623,6 +1638,12 @@
 				BD394E6819D1BE4300148AD5 /* UserInfoDetailViewController.m */,
 				BD394E7419D306EA00148AD5 /* ModifNameViewController.h */,
 				BD394E7519D306EA00148AD5 /* ModifNameViewController.m */,
+				C3EFA08D19F3606A00F0D29E /* UserSystemSetViewController.h */,
+				C3EFA08E19F3606A00F0D29E /* UserSystemSetViewController.m */,
+				C3EFA09019F3632300F0D29E /* UserSystemSetCell.h */,
+				C3EFA09119F3632300F0D29E /* UserSystemSetCell.m */,
+				C3B8FE9C19F3A8ED002A4E58 /* UserFeedbackViewController.h */,
+				C3B8FE9D19F3A8ED002A4E58 /* UserFeedbackViewController.m */,
 			);
 			path = userInfo;
 			sourceTree = "<group>";
@@ -2214,6 +2235,10 @@
 				E74A66E7182C764500488E35 /* MBAttributedLabel.m */,
 				E74A674B182CEC1200488E35 /* MBGuideViewController.h */,
 				E74A674C182CEC1200488E35 /* MBGuideViewController.m */,
+				C3B8FE9919F3841D002A4E58 /* ZSYPopoverListView.h */,
+				C3B8FE9A19F3841D002A4E58 /* ZSYPopoverListView.m */,
+				C3B8FE9F19F3A9D4002A4E58 /* MBTextView.h */,
+				C3B8FEA019F3A9D4002A4E58 /* MBTextView.m */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -2671,6 +2696,7 @@
 				BD394FF419D85A6100148AD5 /* MySerVicePinCheViewController.m in Sources */,
 				E74A66EB182C81BE00488E35 /* MBImageBrowser.m in Sources */,
 				E7F2A1561818CD26004DC62A /* AppDelegate.m in Sources */,
+				C3B8FE9E19F3A8ED002A4E58 /* UserFeedbackViewController.m in Sources */,
 				E74A6740182CDC8800488E35 /* SDWebImageManager.m in Sources */,
 				E72340D6182B398300FBBCB8 /* MBCustomBadge.m in Sources */,
 				E7EF9F1D1828A3A200F057E5 /* FMDatabaseAdditions.m in Sources */,
@@ -2721,6 +2747,7 @@
 				E7EF9E7018278C5100F057E5 /* MBLogin.m in Sources */,
 				E7EF9DF118274A9300F057E5 /* UIImageView+AFNetworking.m in Sources */,
 				E7EF9EFF1827B40400F057E5 /* UIColorAdditions.m in Sources */,
+				C3EFA09219F3632300F0D29E /* UserSystemSetCell.m in Sources */,
 				E7EF9EFD1827B40400F057E5 /* NSNullAdditions.m in Sources */,
 				BD394E4219D0612300148AD5 /* PLBaseViewController.m in Sources */,
 				BD394E4119D0612300148AD5 /* HomeViewController.m in Sources */,
@@ -2736,6 +2763,7 @@
 				E72340D9182B46AC00FBBCB8 /* NSDateUtilities.m in Sources */,
 				BD394FE219D5A2C200148AD5 /* MyServiceViewController.m in Sources */,
 				E72340A8182B1FAC00FBBCB8 /* MBAccessoryView.m in Sources */,
+				C3B8FE9B19F3841D002A4E58 /* ZSYPopoverListView.m in Sources */,
 				E7EF9EA01827A5CD00F057E5 /* GXMLNode.m in Sources */,
 				E7C281AD1829E83300AC76BC /* QRCodeGenerator.m in Sources */,
 				E7EF9E3818277DFC00F057E5 /* MBConstant.m in Sources */,
@@ -2745,6 +2773,7 @@
 				E74A671A182CDB8B00488E35 /* MWCaptionView.m in Sources */,
 				BD394E3E19D0612300148AD5 /* RepadTwoViewController.m in Sources */,
 				E74A671F182CDB8B00488E35 /* MWTapDetectingView.m in Sources */,
+				C3B8FEA119F3A9D4002A4E58 /* MBTextView.m in Sources */,
 				BD394FDB19D4684200148AD5 /* AppUploadCarStyleCardViewController.m in Sources */,
 				E74A673F182CDC8800488E35 /* SDWebImageDownloader.m in Sources */,
 				E74A6743182CDC8800488E35 /* UIImageView+WebCache.m in Sources */,
@@ -2753,6 +2782,7 @@
 				E7C281AE1829E83300AC76BC /* qrencode.c in Sources */,
 				BD394E3619D0612300148AD5 /* UserReginFourViewController.m in Sources */,
 				E74A671D182CDB8B00488E35 /* MWPhotoBrowser.m in Sources */,
+				C3EFA08F19F3606A00F0D29E /* UserSystemSetViewController.m in Sources */,
 				E7C281AB1829E83300AC76BC /* bitstream.c in Sources */,
 				E72340C0182B2F1D00FBBCB8 /* MBTimerButton.m in Sources */,
 				BDCC70171998F97000CCB59D /* Navbar.m in Sources */,
